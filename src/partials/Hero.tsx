@@ -10,26 +10,27 @@ const Hero = () => (
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientText>Ixartz</GradientText> 👋
+          Hi there, I'm <GradientText>Damiano</GradientText> 👋
         </>
       }
       description={
         <>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus{' '}
+          I'm Damiano Tagliaferri, a{' '}
           <a className="text-cyan-400 hover:underline" href="/">
-            malesuada
+            software developer
           </a>{' '}
-          nisi tellus, non imperdiet nisi tempor at. Lorem ipsum dolor sit amet,{' '}
+          and{' '}
           <a className="text-cyan-400 hover:underline" href="/">
-            consectetur
+            game dev generalist
           </a>{' '}
-          adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore.
+          who loves to design and develop interactive experiences. My main
+          skills are C# / C++ for Unity and Unreal.
         </>
       }
       avatar={
         <img
-          className="h-80 w-64"
-          src="/assets/images/avatar.svg"
+          className="h-64 w-64"
+          src="/assets/images/avatar.png"
           alt="Avatar image"
           loading="lazy"
         />
