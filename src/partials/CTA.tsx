@@ -1,10 +1,4 @@
-import {
-  GradientText,
-  Newsletter,
-  Section,
-} from 'astro-boilerplate-components';
-
-const CTA = () => (
+const CTA = () => null; /* (
   <Section>
     <Newsletter
       title={
@@ -15,6 +9,6 @@ const CTA = () => (
       description="Get juicy updates on what I'm up to!"
     />
   </Section>
-);
+); */
 
 export { CTA };

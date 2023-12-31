@@ -3,6 +3,7 @@ import type { IFrontmatter } from 'astro-boilerplate-components';
 
 import { BlogPost } from '@/partials/BlogPost';
 import { CTA } from '@/partials/CTA';
+import { Shield, ShieldType } from '@/partials/Shield';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -16,6 +17,10 @@ const title = `${content.title} - ${AppConfig.site_name}`;
 
 <Base head={{ title, description: content.description }}>
   <BlogPost frontmatter={content}>
+    <Shield url={ShieldType.UNITY} />
+    <Shield url={ShieldType.CSHARP} />
+    <Shield url={ShieldType.FMOD} />
+    <br />
     <slot></slot>
   </BlogPost>
 
