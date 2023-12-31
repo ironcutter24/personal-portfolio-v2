@@ -5,5 +5,11 @@ export interface IMarkdownMeta {
   imgSrc: string;
   imgAlt: string;
   draft: boolean;
+
   shields: string[];
+  gitHubUrl: string;
+  itchUrl: string;
+  steamUrl: string;
+  playStoreUrl: string;
+  appStore: string;
 }

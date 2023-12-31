@@ -1,8 +1,11 @@
 ---
+import { NavbarTwoColumns } from 'astro-boilerplate-components';
+
 import type { IMarkdownMeta } from '@/IMarkdownMeta';
 import { BlogPost } from '@/partials/BlogPost';
 import { CTA } from '@/partials/CTA';
 import { Shield } from '@/partials/Shield';
+import { StoreLink } from '@/partials/StoreLink';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -19,9 +22,28 @@ const isString = (value: any): value is string => typeof value === 'string';
 
 <Base head={{ title, description: content.description }}>
   <BlogPost frontmatter={content}>
-    {content.shields.map((shieldUrl, _index) =>
-      isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
-    )}
+    <NavbarTwoColumns>
+      <div style='max-width: 60%;'>
+        {content.shields.map((shieldUrl, _index) =>
+          isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
+        )}
+      </div>
+      <div>
+        {isString(content.itchUrl) ? (
+          <StoreLink
+            src="/assets/images/icons/itch-badge-color.svg"
+            url={content.itchUrl}
+          />
+        ) : null}
+        {isString(content.gitHubUrl) ? (
+          <StoreLink
+            src="/assets/images/icons/github-mark-white.png"
+            url={content.gitHubUrl}
+          />
+        ) : null}
+      </div>
+    </NavbarTwoColumns>
+
     <br /><br />
     <slot></slot>
   </BlogPost>
