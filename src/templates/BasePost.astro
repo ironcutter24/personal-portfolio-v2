@@ -1,26 +1,28 @@
 ---
-import type { IFrontmatter } from 'astro-boilerplate-components';
-
+import type { IMarkdownMeta } from '@/IMarkdownMeta';
 import { BlogPost } from '@/partials/BlogPost';
 import { CTA } from '@/partials/CTA';
-import { Shield, ShieldType } from '@/partials/Shield';
+import { Shield } from '@/partials/Shield';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
 export interface Props {
-  content: IFrontmatter;
+  content: IMarkdownMeta;
 }
 
 const { content } = Astro.props as Props;
 const title = `${content.title} - ${AppConfig.site_name}`;
+
+// Type guard to check if a value is a string
+const isString = (value: any): value is string => typeof value === 'string';
 ---
 
 <Base head={{ title, description: content.description }}>
   <BlogPost frontmatter={content}>
-    <Shield url={ShieldType.UNITY} />
-    <Shield url={ShieldType.CSHARP} />
-    <Shield url={ShieldType.FMOD} />
-    <br />
+    {content.shields.map((shieldUrl, _index) =>
+      isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
+    )}
+    <br /><br />
     <slot></slot>
   </BlogPost>
 

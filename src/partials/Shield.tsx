@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Unused, badge links are specified in markdown files
 export const ShieldType = {
   ASEPRITE:
     'https://img.shields.io/badge/Aseprite-FFFFFF?style=flat&logo=Aseprite&logoColor=#7D929E',
@@ -21,7 +22,7 @@ type IShieldProps = {
 const Shield: React.FC<IShieldProps> = ({ url }) => (
   <img
     style={{ float: 'left', margin: '6px 8px 6px 0px' }}
-    src={url}
+    src={`https://img.shields.io/badge/${url}`}
     alt="Shield Image"
   />
 );

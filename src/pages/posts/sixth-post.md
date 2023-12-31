@@ -5,6 +5,19 @@ description: Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur ve
 pubDate: 2020-02-06T00:00:00Z
 imgSrc: '/assets/images/image-post.jpeg'
 imgAlt: 'Image post'
+shields:
+- Unity-ODIN_|_UniTask_|_DOTween-57b9d3.svg?style=flat&logo=unity
+
+- Godot-%23FFFFFF.svg?style=flat&logo=godot-engine
+- Unity-%23000000.svg?style=flat&logo=unity&logoColor=white
+- UE5-%23313131.svg?style=flat&logo=unrealengine&logoColor=white
+- C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
+
+- FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
+- Wwise-0058D9?style=flat&logo=wwise&logoColor=#00549F
+
+- Aseprite-FFFFFF?style=flat&logo=Aseprite&logoColor=#7D929E
+- Blender-%23F5792A.svg?style=flat&logo=blender&logoColor=white
 ---
 
 This is a paragraph. Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non molestias eos excepturi, inventore atque cupiditate. Sed voluptatem quas omnis culpa, et odit.
