@@ -7,6 +7,7 @@ imgSrc: '/assets/images/image-post.jpeg'
 imgAlt: 'Image post'
 shields:
 - Unity-ODIN_|_UniTask_|_DOTween-57b9d3.svg?style=flat&logo=unity
+- Flutter-%2302569B.svg?style=flat&logo=Flutter&logoColor=white
 
 - Godot-%23FFFFFF.svg?style=flat&logo=godot-engine
 - Unity-%23000000.svg?style=flat&logo=unity&logoColor=white
