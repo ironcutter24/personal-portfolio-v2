@@ -2,7 +2,7 @@
 layout: '@/templates/BasePost.astro'
 title: Ice & Fire
 description: Vertical slice of a top-down action game where you have to balance your temperature to stay alive.
-pubDate: 2020-02-05T00:00:00Z
+pubDate: 2024-01-05T00:00:00Z
 imgSrc: '/assets/images/image-post2.jpeg'
 imgAlt: 'Ice & Fire cover art'
 shields:

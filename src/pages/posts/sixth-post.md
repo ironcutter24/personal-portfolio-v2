@@ -13,6 +13,7 @@ shields:
 - Unity-%23000000.svg?style=flat&logo=unity&logoColor=white
 - UE5-%23313131.svg?style=flat&logo=unrealengine&logoColor=white
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
+- GDScript-%2374267B.svg?style=flat
 
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 - Wwise-0058D9?style=flat&logo=wwise&logoColor=#00549F
