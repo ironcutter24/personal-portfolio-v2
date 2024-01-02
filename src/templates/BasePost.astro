@@ -1,6 +1,4 @@
 ---
-import { NavbarTwoColumns } from 'astro-boilerplate-components';
-
 import type { IMarkdownMeta } from '@/IMarkdownMeta';
 import { BlogPost } from '@/partials/BlogPost';
 import { CTA } from '@/partials/CTA';
@@ -22,17 +20,20 @@ const isString = (value: any): value is string => typeof value === 'string';
 
 <Base head={{ title, description: content.description }}>
   <BlogPost frontmatter={content}>
-    <NavbarTwoColumns>
-      <div style='max-width: 60%;'>
+    <div style='width: 100%; display: flex; flex-direction: column;'>
+      <div style='width: 100%; margin-top: -20px'>
         {content.shields.map((shieldUrl, _index) =>
           isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
         )}
       </div>
-      <div>
-        {isString(content.itchUrl) ? (
+      <div style='text-align: center;'>
+        <br /><b>{content.description}</b><br /><br />
+      </div>
+      <div style='width: 100%; text-align: center;'>
+        {isString(content.gitHubUrl) ? (
           <StoreLink
-            src="/assets/images/icons/itch-badge-color.svg"
-            url={content.itchUrl}
+            src="/assets/images/icons/github-mark-white.png"
+            url={content.gitHubUrl}
           />
         ) : null}
         {isString(content.playStoreUrl) ? (
@@ -41,14 +42,14 @@ const isString = (value: any): value is string => typeof value === 'string';
             url={content.playStoreUrl}
           />
         ) : null}
-        {isString(content.gitHubUrl) ? (
+        {isString(content.itchUrl) ? (
           <StoreLink
-            src="/assets/images/icons/github-mark-white.png"
-            url={content.gitHubUrl}
+            src="/assets/images/icons/itch-badge-color.svg"
+            url={content.itchUrl}
           />
         ) : null}
       </div>
-    </NavbarTwoColumns>
+    </div>
 
     <br />
     <slot></slot>

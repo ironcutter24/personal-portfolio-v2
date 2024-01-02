@@ -1,9 +1,9 @@
 ---
 layout: '@/templates/BasePost.astro'
 title: OOODLE
-description: Multiplayer game integrated with social network.
+description: Multiplayer game with content sponsored by companies and integrated with a Flutter instant messaging app.
 pubDate: 2023-10-12T00:00:00Z
-imgSrc: '/assets/images/image-post3.jpeg'
+imgSrc: '/assets/images/post-ooodle/cover.png'
 imgAlt: 'OOODLE cover art'
 shields:
 - Unity-UGS_|_Matchmaker_|_DOTween-57b9d3.svg?style=flat&logo=unity

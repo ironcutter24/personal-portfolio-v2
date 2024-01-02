@@ -11,7 +11,7 @@ const StoreLink: React.FC<IStoreLinkProps> = ({ src, url }) => (
       src={src}
       alt="Store Link"
       style={{
-        float: 'right',
+        display: 'inline-block',
         height: '36px',
         width: 'auto',
         margin: '0 4px 6px',
