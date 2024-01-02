@@ -13,4 +13,10 @@ gitHubUrl: https://github.com/ironcutter24/GDtvJam2023
 itchUrl: https://ironcutter24.itch.io/afterimage
 ---
 
+2D - 10d jam
+
+- 52th place for best mechanics
+- Roles: designer, developer and level designer help
+- Managed a team of 4 people
+
 Full typography example at [this page](../sixth-post/).

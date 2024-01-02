@@ -11,4 +11,12 @@ shields:
 - Flutter-Unity_Widget-02569B.svg?style=flat&logo=Flutter&logoColor=white
 ---
 
+3D - mobile - PoC
+
+- Helped company raise 300,000$ investment
+- Online multiplayer
+- Tile based procgen
+- Flutter integration
+- Weather system that mimics real weather
+
 Full typography example at [this page](../sixth-post/).

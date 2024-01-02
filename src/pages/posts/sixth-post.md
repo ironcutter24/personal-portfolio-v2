@@ -160,3 +160,27 @@ Lorem ipsum dolor sit amet consectetur adipisicing elit. Tenetur vero esse non m
 s = "Python syntax highlighting"
 print s
 ```
+
+## Embed videos
+
+<div class="video-container">
+  <iframe src="https://www.youtube.com/embed/tgbNymZ7vqY" frameborder="0" allowfullscreen></iframe>
+</div>
+<style>
+  .video-container {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+    height: 0;
+    overflow: hidden;
+  }
+
+  .video-container iframe,
+  .video-container object,
+  .video-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+</style>

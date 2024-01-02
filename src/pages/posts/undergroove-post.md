@@ -13,4 +13,12 @@ gitHubUrl: https://github.com/ironcutter24/GGJ-2023
 itchUrl: https://ironcutter24.itch.io/undergroove
 ---
 
+2.5D - 10d jam
+
+- Roles: designer, lead developer
+- Rhythm game mechanic
+- 3D tiles editor tools
+- Audio programming
+- Managed a team of 12 people
+
 Full typography example at [this page](../sixth-post/).

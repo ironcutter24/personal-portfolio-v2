@@ -11,4 +11,11 @@ shields:
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
 
+3D - Vertical Slice
+
+- Unique hack & slash combat system based on temperature
+- Gameplay programming
+- Custom UniTask FSM
+- Enemy AI programming
+
 Full typography example at [this page](../sixth-post/).

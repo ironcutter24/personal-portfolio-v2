@@ -13,4 +13,13 @@ gitHubUrl: https://github.com/ironcutter24/GGJ-2022
 itchUrl: https://ironcutter24.itch.io/neden
 ---
 
+3D - 10d jam
+
+- Gameplay programming
+- Enemy AI (FSM)
+- Object pooling system
+- Audio programming
+
+NedeN OST overview [link](https://www.youtube.com/watch?v=b6YrhRlrm2w)
+
 Full typography example at [this page](../sixth-post/).

@@ -29,10 +29,10 @@ const isString = (value: any): value is string => typeof value === 'string';
         )}
       </div>
       <div>
-        {isString(content.gitHubUrl) ? (
+        {isString(content.itchUrl) ? (
           <StoreLink
-            src="/assets/images/icons/github-mark-white.png"
-            url={content.gitHubUrl}
+            src="/assets/images/icons/itch-badge-color.svg"
+            url={content.itchUrl}
           />
         ) : null}
         {isString(content.playStoreUrl) ? (
@@ -41,16 +41,16 @@ const isString = (value: any): value is string => typeof value === 'string';
             url={content.playStoreUrl}
           />
         ) : null}
-        {isString(content.itchUrl) ? (
+        {isString(content.gitHubUrl) ? (
           <StoreLink
-            src="/assets/images/icons/itch-badge-color.svg"
-            url={content.itchUrl}
+            src="/assets/images/icons/github-mark-white.png"
+            url={content.gitHubUrl}
           />
         ) : null}
       </div>
     </NavbarTwoColumns>
 
-    <br /><br />
+    <br />
     <slot></slot>
   </BlogPost>
 

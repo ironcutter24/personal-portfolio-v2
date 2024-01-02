@@ -13,4 +13,11 @@ shields:
 playStoreUrl: https://play.google.com/store/apps/details?id=com.ironcuttergames.arshooter
 ---
 
+AR - mobile
+
+- Play Games integration
+- Online saves & leaderboards
+- Resizable game world
+- Text localization
+
 Full typography example at [this page](../sixth-post/).
