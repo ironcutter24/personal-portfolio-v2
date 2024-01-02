@@ -26,9 +26,10 @@ const isString = (value: any): value is string => typeof value === 'string';
           isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
         )}
       </div>
-      <div style='text-align: center;'>
+      <!--div style='text-align: center;'>
         <br /><b>{content.description}</b><br /><br />
-      </div>
+      </div-->
+      <br />
       <div style='width: 100%; text-align: center;'>
         {isString(content.gitHubUrl) ? (
           <StoreLink
