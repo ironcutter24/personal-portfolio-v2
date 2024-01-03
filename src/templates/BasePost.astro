@@ -3,7 +3,7 @@ import type { IMarkdownMeta } from '@/IMarkdownMeta';
 import { BlogPost } from '@/partials/BlogPost';
 import { CTA } from '@/partials/CTA';
 import { Shield } from '@/partials/Shield';
-import { StoreLink } from '@/partials/StoreLink';
+import { StoreLinkBanner } from '@/partials/StoreLinkBanner';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 
@@ -26,30 +26,11 @@ const isString = (value: any): value is string => typeof value === 'string';
           isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
         )}
       </div>
-      <!--div style='text-align: center;'>
-        <br /><b>{content.description}</b><br /><br />
-      </div-->
-      <br />
-      <div style='width: 100%; text-align: center;'>
-        {isString(content.gitHubUrl) ? (
-          <StoreLink
-            src="/assets/images/icons/github-mark-white.png"
-            url={content.gitHubUrl}
-          />
-        ) : null}
-        {isString(content.playStoreUrl) ? (
-          <StoreLink
-            src="/assets/images/icons/google-play-badge.svg"
-            url={content.playStoreUrl}
-          />
-        ) : null}
-        {isString(content.itchUrl) ? (
-          <StoreLink
-            src="/assets/images/icons/itch-badge-color.svg"
-            url={content.itchUrl}
-          />
-        ) : null}
-      </div>
+      <StoreLinkBanner
+        gitHubUrl={content.gitHubUrl}
+        playStoreUrl={content.playStoreUrl}
+        itchUrl={content.itchUrl}
+      />
     </div>
 
     <br />

@@ -8,14 +8,14 @@ type IStoreLinkProps = {
 const StoreLink: React.FC<IStoreLinkProps> = ({ src, url }) => (
   <a href={url} target="_blank">
     <img
-      src={src}
-      alt="Store Link"
       style={{
         display: 'inline-block',
         height: '36px',
         width: 'auto',
         margin: '0 4px 6px',
       }}
+      src={src}
+      alt="Store Link"
     />
   </a>
 );
