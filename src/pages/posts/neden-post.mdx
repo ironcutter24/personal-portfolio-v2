@@ -6,14 +6,13 @@ pubDate: 2022-01-30T00:00:00Z
 imgSrc: '/assets/images/post-neden/cover.png'
 imgAlt: 'Cover art'
 shields:
-- Unity-LeanTween-57b9d3.svg?style=flat&logo=unity
+- Unity-57b9d3.svg?style=flat&logo=unity
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
-import { StoreLinkBanner } from '@/partials/StoreLinkBanner.tsx';
-import { ProjectDetails} from '@/partials/ProjectDetails.tsx';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
 
-3D - 10d jam
+{frontmatter.title} is a <b>3D top-down action game</b> made for Global Game Jam 2022.
 
 <StoreLinkBanner
   gitHubUrl='https://github.com/ironcutter24/GGJ-2022'
@@ -22,11 +21,13 @@ import { ProjectDetails} from '@/partials/ProjectDetails.tsx';
 />
 
 <ProjectDetails
-  role=''
-  company=''
-  platforms=''
-  time=''
+  role='Lead Developer'
+  company='N/A'
+  platforms='PC - Linux'
+  time='10 days'
 />
+
+## What I did
 
 - Gameplay programming
 - Enemy AI (FSM)
@@ -35,4 +36,4 @@ import { ProjectDetails} from '@/partials/ProjectDetails.tsx';
 
 ## Other resources
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/b6YrhRlrm2w?si=YSAT3UcV5MSHEs8F" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<EmbedVideo url="https://www.youtube.com/embed/b6YrhRlrm2w?si=YSAT3UcV5MSHEs8F" />

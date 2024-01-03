@@ -14,7 +14,7 @@ const ProjectDetails = (props: IProjectDetailsProps) => (
       <br />
       <b style={{ color: '#0089D0' }}>Platforms:</b> <i>{props.platforms}</i>
       <br />
-      <b style={{ color: '#0DB14B' }}>Time on project:</b> <i>{props.time}</i>
+      <b style={{ color: '#0DB14B' }}>Work time:</b> <i>{props.time}</i>
       <br />
     </p>
   </>
