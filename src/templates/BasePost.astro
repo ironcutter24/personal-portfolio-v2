@@ -3,9 +3,9 @@ import type { IMarkdownMeta } from '@/IMarkdownMeta';
 import { BlogPost } from '@/partials/BlogPost';
 import { CTA } from '@/partials/CTA';
 import { Shield } from '@/partials/Shield';
-import { StoreLinkBanner } from '@/partials/StoreLinkBanner';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
+import { isString } from '@/utils/Posts';
 
 export interface Props {
   content: IMarkdownMeta;
@@ -13,27 +13,17 @@ export interface Props {
 
 const { content } = Astro.props as Props;
 const title = `${content.title} - ${AppConfig.site_name}`;
-
-// Type guard to check if a value is a string
-const isString = (value: any): value is string => typeof value === 'string';
 ---
 
 <Base head={{ title, description: content.description }}>
   <BlogPost frontmatter={content}>
     <div style='width: 100%; display: flex; flex-direction: column;'>
-      <div style='width: 100%; margin-top: -20px'>
+      <div style='width: 100%'>
         {content.shields.map((shieldUrl, _index) =>
           isString(shieldUrl) ? <Shield url={shieldUrl} /> : null
         )}
       </div>
-      <StoreLinkBanner
-        gitHubUrl={content.gitHubUrl}
-        playStoreUrl={content.playStoreUrl}
-        itchUrl={content.itchUrl}
-      />
     </div>
-
-    <br />
     <slot></slot>
   </BlogPost>
 

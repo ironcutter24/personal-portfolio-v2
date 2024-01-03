@@ -7,9 +7,4 @@ export interface IMarkdownMeta {
   draft: boolean;
 
   shields: string[];
-  gitHubUrl: string;
-  itchUrl: string;
-  steamUrl: string;
-  playStoreUrl: string;
-  appStore: string;
 }

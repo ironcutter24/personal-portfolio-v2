@@ -8,3 +8,9 @@ export const sortByDate = (posts: MDXInstance<IFrontmatter>[]) => {
       new Date(a.frontmatter.pubDate).valueOf()
   );
 };
+
+// Type guard to check if a value is a string
+export const isString = (value: any): value is string =>
+  typeof value === 'string';
+
+export const isNotEmpty = (value: any): value is string => value !== '';

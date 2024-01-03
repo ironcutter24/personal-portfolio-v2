@@ -23,7 +23,7 @@ export default defineConfig({
     tailwind({}),
     sitemap(),
     robotsTxt(),
-    mdx(),
+    [mdx()],
     astroImageTools,
   ],
 });
