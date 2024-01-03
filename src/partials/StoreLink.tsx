@@ -13,6 +13,7 @@ const StoreLink: React.FC<IStoreLinkProps> = ({ src, url }) => (
         height: '36px',
         width: 'auto',
         margin: '0 4px 6px',
+        borderRadius: '0',
       }}
       src={src}
       alt="Store Link"
