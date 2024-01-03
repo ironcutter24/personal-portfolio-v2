@@ -1,16 +1,17 @@
 import {
-  Logo,
   NavbarTwoColumns,
   NavMenu,
   NavMenuItem,
   Section,
 } from 'astro-boilerplate-components';
 
+import { GradientLogo } from '@/partials/GradientLogo';
+
 const Navbar = () => (
   <Section>
     <NavbarTwoColumns>
       <a href="/">
-        <Logo
+        <GradientLogo
           icon={
             <svg
               className="mr-1 h-10 w-10 stroke-cyan-600"
