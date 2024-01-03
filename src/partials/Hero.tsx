@@ -17,7 +17,7 @@ const Hero = () => (
         <>
           I'm Damiano Tagliaferri, a{' '}
           <a className="text-cyan-400 hover:underline" href="/">
-            software developer
+            software engineer
           </a>{' '}
           and{' '}
           <a className="text-cyan-400 hover:underline" href="/">
