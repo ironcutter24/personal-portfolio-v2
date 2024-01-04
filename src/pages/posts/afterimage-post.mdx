@@ -3,7 +3,7 @@ layout: '@/templates/BasePost.astro'
 title: Afterimage
 description: Puzzle platformer where you control two characters on different planes of existence that collaborate to clear puzzle rooms.
 pubDate: 2023-05-29T00:00:00Z
-imgSrc: '/assets/images/post-afterimage/cover.png'
+imgSrc: '/assets/images/covers/afterimage-cover.png'
 imgAlt: 'Cover art'
 shields:
 - Unity-DOTween-57b9d3.svg?style=flat&logo=unity
@@ -12,7 +12,8 @@ shields:
 ---
 import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
 
-2D - 10d jam
+{frontmatter.title} is a 2D puzzle platformer where you control two characters that can interact with the environment, but not with each other.
+The game got 52nd place for best mechanics in GameDevTV Jam 2023.
 
 <StoreLinkBanner
   gitHubUrl='https://github.com/ironcutter24/GDtvJam2023'
@@ -29,10 +30,33 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 ## What I did
 
-- 52th place for best mechanics
-- Roles: designer, developer and level designer help
-- Managed a team of 4 people
+- Coordinated a team of 4 people
+- [Gameplay design/development](#gameplay)
+- [Designed 4 levels and polished 2 others](#level-design)
+- Animated the astronaut character
+- Created intro and ending cutscenes
 
 ## Gameplay
 
 <EmbedVideo url="https://www.youtube.com/embed/I0cuBfJZC24?si=9Dg-G2eXKbRtnKnJ" />
+
+
+## Level Design
+
+I designed 4 levels, on top of performing some polishing on the others.<br />
+This includes refactoring and simplifying the final level.
+
+**Polishing:** Added drop to teach box grabbing mechanic.
+![Box grab drop](../../images/post-afterimage/cube-grab-drop.png)
+**LV 4 design:** Teaches that you can carry the other player on the cube.
+![Jump assist](../../images/post-afterimage/jump-assist.png)
+**LV 6 design:** Fake door level that tricks you into an obvious solution,
+just to reveal the catch: cubes can't pass through gates.
+This one also features the cube launch mechanic introduced in previous levels.
+![Fake door](../../images/post-afterimage/fake-door.png)
+**LV 7 design:** Generic doors level
+![Generic puzzle](../../images/post-afterimage/generic-puzzle.png)
+**LV 8 design:** "The Bridge" level. Uses the cube carry in a more complex way.
+![The bridge](../../images/post-afterimage/the-bridge.png)
+**Design:** Designed the cube gate used in multiple levels
+![Cube gate](../../images/post-afterimage/cube-gates.png)
