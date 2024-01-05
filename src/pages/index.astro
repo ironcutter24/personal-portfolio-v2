@@ -9,7 +9,10 @@ import { AppConfig } from '@/utils/AppConfig';
 import { sortByDate } from '@/utils/Posts';
 
 const allPosts = await Astro.glob<IFrontmatter>('./posts/*.mdx');
-const sortedPosts = sortByDate(allPosts);
+const nonDraftPosts = allPosts.filter(
+  (item) => item.frontmatter.draft !== true
+);
+const sortedPosts = sortByDate(nonDraftPosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 
 const { title } = AppConfig;
