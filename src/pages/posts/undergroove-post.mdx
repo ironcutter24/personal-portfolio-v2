@@ -1,7 +1,7 @@
 ---
 layout: '@/templates/BasePost.astro'
 title: Undergroove
-description: Puzzle platformer were you control the growth of roots and root yourself to moving platforms to traverse the environment.
+description: Puzzle platformer - Control the growth of roots to traverse the environment.
 pubDate: 2023-02-05T00:00:00Z
 imgSrc: '/assets/images/covers/undergroove-cover.png'
 imgAlt: 'Cover art'
@@ -15,8 +15,8 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 <div style="text-align: justify">
   {frontmatter.title} is a <b>2.5D puzzle platformer</b> made for Global Game Jam 2023.
-  The puzzles involve controlling the growth of roots to lock/unlock moving platforms and open up a path.
-  The environment is made of 3D tiles.
+  The puzzles revolve around manipulating the growth of roots to lock or unlock moving platforms and open a path.
+  Environment and platforms are made of 3D tiles, each measuring 1x1x2 in size.
 </div>
 
 <StoreLinkBanner
@@ -27,7 +27,7 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 <ProjectDetails
   role='Lead Developer, Gameplay Designer'
-  company='N/A'
+  company='[Game Jam]'
   platforms='PC'
   time='10 days'
 />
@@ -43,12 +43,12 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 <EmbedVideo url="https://www.youtube.com/embed/M6PGIY_IXGw?si=r7TJ_FawfAU6Gus5" />
 
-I designed and implemented roots and platforms mechanics, and created editor tools to place them in the world.
+I designed and implemented mechanics for roots and platforms, and developed editor tools for their placement in the game world.
 
-The platforms move on an update that is in sync with the music, to help understand the timing.
-Roots extend/retract logic predetermines if the roots have enough time to reach a static position before the start of the next move update.
-Depending on the results the roots will move or play a stuck animation.
-In addition, the roots actions performed just before the end of the move loop are queued and executed when it ends.
+The platforms move on an update that is synchronized with the music, to help get the timing right.
+The roots' extend/retract logic determines whether they have enough time to reach a static position before the next move update.
+Depending on the outcome, the roots will either move or play a stuck animation.
+Additionally, actions performed by the roots just before the end of the move loop are queued and executed when it concludes.
 
-The "stick to wall" ability complements the others by allowing to use the platforms to move in unusual ways.
-I'm responsible for making it work and ensure that the character never gets stuck inside walls and platforms.
+The "stick to wall" ability complements these mechanics, allowing players to use platforms to move in unconventional ways.
+I'm responsible for making it work and ensuring the character never gets stuck inside walls and platforms.

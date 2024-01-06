@@ -1,7 +1,7 @@
 ---
 layout: '@/templates/BasePost.astro'
 title: Afterimage
-description: Puzzle platformer where you control two characters on different planes of existence that collaborate to clear puzzle rooms.
+description: Puzzle platformer - Control two characters on different planes of existence that collaborate to clear puzzle rooms.
 pubDate: 2023-05-29T00:00:00Z
 imgSrc: '/assets/images/covers/afterimage-cover.png'
 imgAlt: 'Cover art'
@@ -12,9 +12,9 @@ shields:
 ---
 import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
 
-{frontmatter.title} is a 2D puzzle platformer where you control two characters on different planes of existence.<br />
-They are blocked by the environment and walls of their same type (Solid and ghost), but they cannot interact with each other.<br />
-The game got 52nd place for best mechanics in GameDevTV Jam 2023.
+{frontmatter.title} is a 2D puzzle platformer where players control two characters on distinct planes of existence.<br />
+They cannot interact with each other, and are blocked by walls of their same type (Solid and ghost).<br />
+The game achieved the 52nd place for the best mechanics in GameDevTV Jam 2023.
 
 <StoreLinkBanner
   gitHubUrl='https://github.com/ironcutter24/GDtvJam2023'
@@ -45,20 +45,30 @@ Grab, carry player, gates
 
 ## Level Design
 
-I designed 4 levels, on top of performing some polishing on the others.<br />
-This includes refactoring and simplifying the final level.
+I crafted four levels and conducted refinements on others,
+which involved the refactoring and simplification of the final level.
 
-**Polishing:** Added drop to teach box grabbing mechanic.
-![Box grab drop](../../images/post-afterimage/cube-grab-drop-hl.png)
-**LV 4 design:** Teaches that you can carry the other player on the cube.
+**Polishing:** Added drop to teach the box-grabbing mechanic.
+![Box grab drop](../../images/post-afterimage/cube-grab-drop.png)
+
+**LV 2 design:** Teaches players they can launch the cube upwards.
+![Jump assist](../../images/post-afterimage/cube-launch.jpg)
+
+**LV 4 design:** Teaches players they can carry each other on the cube.
 ![Jump assist](../../images/post-afterimage/jump-assist.png)
-**LV 6 design:** Fake door level that tricks you into an obvious solution,
+
+**LV 6 design:** Guides players toward an apparent solution,
 just to reveal the catch: cubes can't pass through gates.
-This one also features the cube launch mechanic introduced in previous levels.
+This one also includes the upward cube launch introduced in LV 2.
 ![Fake door](../../images/post-afterimage/fake-door.png)
+
+{/*
 **LV 7 design:** Generic doors level
 ![Generic puzzle](../../images/post-afterimage/generic-puzzle.png)
+*/}
+
 **LV 8 design:** "The Bridge" level. Uses the cube carry in a more complex way.
 ![The bridge](../../images/post-afterimage/the-bridge.png)
-**Design:** Designed the cube gate used in multiple levels
+
+**Design:** Designed the cube gate utilized in multiple levels.
 ![Cube gate](../../images/post-afterimage/cube-gates.png)
