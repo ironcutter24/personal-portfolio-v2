@@ -22,7 +22,7 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 </div>
 
 <ProjectDetails
-  role='Lead Game Developer'
+  role='Unity Developer'
   company='OOO Labs'
   platforms='Android - iOS'
   time='4 months'
@@ -31,21 +31,31 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 ## What I did
 
 1. [*Multiplayer client/server*](#multiplayer)
-2. [*Tile-based procgen*](#level-generation)
-3. *Unity - Flutter integration*
-4. *Spline-based navigation*
-5. [*Scalable AI system*](#ai-systems)
-6. *Realtime weather*
+1. [*Tile-based procgen*](#level-generation)
+1. *Unity - Flutter integration*
+1. *Spline-based navigation*
+1. [*Scalable AI system*](#ai-systems)
+1. [*Realtime weather*](#realtime-weather)
 
 ## Multiplayer
 
-(*NGO, GSH, Matchmaker*)
-Multiplayer details...
+- **Netcode for GameObjects**: Syncronization of character location and shared rewards.
+- **Game Server Hosting**: Server configuration and Unity backend development
+- **Matchmaker**: Automatic match creation based on the id of the current chatroom (Shared through Flutter integration)
 
 ## Level generation
 
-Sockets
+Developed the procedural generation system, following (and contributing to) design specifications.
+It is achieved defining sockets on tiles for each unique connection and chosing a (weighted)
+random connection from a pool of available tiles.
 
-## AI Systems
+## AI systems
 
-Swappable AIs
+Created a flexible AI system that allows composition and sharing of behaviors.
+It is based on a *hierarchical state machine* pattern, with the twist that every submachine is a pluggable and reusable component.
+The top-level machine is customizable for each character, making it powerful but also easy to use.
+
+## Realtime weather
+
+Implemented API calls to geolocalize the user through IP address (if GPS is unavailable) and fetch local weather conditions from OpenWeatherMap.
+The current weather is then used to load and apply the corresponding camera filters and/or particle systems.
