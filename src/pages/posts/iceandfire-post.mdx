@@ -36,5 +36,98 @@ while ensuring they play well with animations and interact correctly with other 
 - Melee enemy lock  // TODO: import gif
 
 ## Combat system
-- UniTask FSM  // TODO: insert code snippet
-- AI programming  // TODO: insert code snippet
+**AI programming**
+
+```
+public class CustomEnemyAI : BaseEnemyAI
+{
+  protected override FSMState EnterState => IdleState;
+
+  void Start()
+  {
+    StartFSM();
+  }
+
+  async UniTask<FSMState> IdleState(CancellationToken token)
+  {
+    await HTask.WaitUntil(() => Actor.CanSeePlayer, token);
+    return ChaseState;
+  }
+
+  async UniTask<FSMState> ChaseState(CancellationToken token)
+  {
+    await HTask.RepeatUntil(
+      () => Agent.SetDestination(PlayerInstance.Position),
+      () => Actor.CanAttackPlayer, 
+      .1f, token
+      );
+
+    return AttackState;
+  }
+
+  // ...
+}
+```
+
+**UniTask FSM**
+```
+[RequireComponent(typeof(AEnemy))]
+public abstract class BaseEnemyAI : MonoBehaviour
+{
+  private CancellationTokenSource interruptTokenSource;
+  
+  protected FSMState CurrentState;
+  protected abstract FSMState EnterState { get; }
+  
+  public delegate UniTask<FSMState> FSMState(CancellationToken ct);
+
+  // ...
+
+  protected virtual void Awake()
+  {
+    // ...
+    CurrentState = EnterState;
+  }
+
+  protected void StartFSM()
+  {
+    AILoop();
+  }
+
+  private async void AILoop()
+  {
+    interruptTokenSource = new CancellationTokenSource();
+    var linkedTokenSource = CancellationTokenSource.CreateLinkedTokenSource(
+      interruptTokenSource.Token, this.GetCancellationTokenOnDestroy()
+      );
+
+    try
+    {
+      if (logCurrentState) LogCurrentState();
+      while (gameObject && gameObject.activeInHierarchy)
+      {
+        CurrentState = await CurrentState(linkedTokenSource.Token);
+        if (logCurrentState) LogCurrentState();
+      }
+    }
+    catch (OperationCanceledException) { }
+  }
+
+  protected void InterruptCurrentState(FSMState nextState)
+  {
+    interruptTokenSource.Cancel();
+    OnStateInterrupted();
+    CurrentState = nextState;
+    AILoop();
+  }
+
+  protected virtual void OnStateInterrupted()
+  {
+    Agent.isStopped = false;
+    Actor.SetGraphics(true);
+    Actor.Root.ResetAttackData();
+  }
+
+  // ...
+}
+```
