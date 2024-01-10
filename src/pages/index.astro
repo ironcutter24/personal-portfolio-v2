@@ -1,18 +1,16 @@
 ---
-import type { IFrontmatter } from 'astro-boilerplate-components';
-
+import type { IMarkdownMeta } from '@/IMarkdownMeta';
 import { CTA } from '@/partials/CTA';
 import { Hero } from '@/partials/Hero';
 import { RecentPosts } from '@/partials/RecentPosts';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
-import { sortByDate } from '@/utils/Posts';
+import { excludeDrafts, getShowcase, sortByDate } from '@/utils/Posts';
 
-const allPosts = await Astro.glob<IFrontmatter>('./posts/*.mdx');
-const nonDraftPosts = allPosts.filter(
-  (item) => item.frontmatter.draft !== true
-);
-const sortedPosts = sortByDate(nonDraftPosts);
+const allPosts = await Astro.glob<IMarkdownMeta>('./posts/*.mdx');
+const visiblePosts = excludeDrafts(allPosts);
+const showcasePosts = getShowcase(visiblePosts);
+const sortedPosts = sortByDate(showcasePosts);
 const lastThreePosts = sortedPosts.slice(0, 3);
 
 const { title } = AppConfig;
