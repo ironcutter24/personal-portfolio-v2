@@ -25,6 +25,31 @@ const {
 
     <link rel='alternate' type='application/rss+xml' href='/rss.xml' />
     <link rel='icon' type='image/x-icon' href='/favicon.ico' />
+
+    <style is:global>
+      :root {
+        color-scheme: dark;
+      }
+
+      pre {
+        max-height: 400px;
+      }
+
+      code {
+        counter-reset: step;
+        counter-increment: step 0;
+      }
+
+      code .line::before {
+        content: counter(step);
+        counter-increment: step;
+        width: 1rem;
+        margin-right: 1.5rem;
+        display: inline-block;
+        text-align: right;
+        color: rgba(115, 138, 148, 0.4);
+      }
+    </style>
   </head>
   <body class='bg-slate-900 text-gray-100'>
     <Navbar />
@@ -33,23 +58,4 @@ const {
 
     <Footer />
   </body>
-</html>
-
-
-<!-- Custom line numbers for Shiki code highlighting -->
-<style is:global>
-  code {
-    counter-reset: step;
-    counter-increment: step 0;
-  }
-
-  code .line::before {
-    content: counter(step);
-    counter-increment: step;
-    width: 1rem;
-    margin-right: 1.5rem;
-    display: inline-block;
-    text-align: right;
-    color: rgba(115,138,148,.4)
-  }
-</style>
+</html><!-- Custom line numbers for Shiki code highlighting -->
