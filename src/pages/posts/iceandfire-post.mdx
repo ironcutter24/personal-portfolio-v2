@@ -71,63 +71,84 @@ public class CustomEnemyAI : BaseEnemyAI
 
 **UniTask FSM**
 ```csharp
+/// <summary>
+/// Base class for enemy artificial intelligence.
+/// </summary>
 [RequireComponent(typeof(AEnemy))]
-public abstract class BaseEnemyAI : MonoBehaviour
+public abstract partial class BaseEnemyAI : MonoBehaviour
 {
-  private CancellationTokenSource interruptTokenSource;
-  
-  protected FSMState CurrentState;
-  protected abstract FSMState EnterState { get; }
-  
-  public delegate UniTask<FSMState> FSMState(CancellationToken ct);
+    public delegate UniTask<FSMState> FSMState(CancellationToken cancellationToken);
 
-  // ...
+    protected FSMState CurrentState;
 
-  protected virtual void Awake()
-  {
+    protected abstract FSMState EnterState { get; }
+    private CancellationTokenSource InterruptTokenSource { get; set; }
+
     // ...
-    CurrentState = EnterState;
-  }
 
-  protected void StartFSM()
-  {
-    AILoop();
-  }
-
-  private async void AILoop()
-  {
-    interruptTokenSource = new CancellationTokenSource();
-    var linkedTokenSource = CancellationTokenSource.CreateLinkedTokenSource(
-      interruptTokenSource.Token, this.GetCancellationTokenOnDestroy()
-      );
-
-    try
+    protected virtual void Start()
     {
-      if (logCurrentState) LogCurrentState();
-      while (gameObject && gameObject.activeInHierarchy)
-      {
-        CurrentState = await CurrentState(linkedTokenSource.Token);
-        if (logCurrentState) LogCurrentState();
-      }
+        // ...
+
+        CurrentState = EnterState;
+        _ = StartFSMAsync();
     }
-    catch (OperationCanceledException) { }
-  }
 
-  protected void InterruptCurrentState(FSMState nextState)
-  {
-    interruptTokenSource.Cancel();
-    OnStateInterrupted();
-    CurrentState = nextState;
-    AILoop();
-  }
+    #region FSM Loop
 
-  protected virtual void OnStateInterrupted()
-  {
-    Agent.isStopped = false;
-    Actor.SetGraphics(true);
-    Actor.Root.ResetAttackData();
-  }
+    private async UniTask StartFSMAsync()
+    {
+        var linkedTokenSource = GenerateLinkedTokenSource();
 
-  // ...
+        try
+        {
+            await AILoopAsync(linkedTokenSource.Token);
+        }
+        catch (OperationCanceledException ex)
+        {
+            Debug.Log($"AILoop was cancelled: {ex.Message}", gameObject);
+        }
+        finally
+        {
+            InterruptTokenSource?.Dispose();
+            InterruptTokenSource = null;
+        }
+    }
+
+    private async UniTask AILoopAsync(CancellationToken token)
+    {
+        while (true)
+        {
+            if (logCurrentState) LogCurrentState();
+            CurrentState = await CurrentState(token);
+        }
+    }
+
+    private CancellationTokenSource GenerateLinkedTokenSource()
+    {
+        InterruptTokenSource ??= new CancellationTokenSource();
+        return CancellationTokenSource.CreateLinkedTokenSource(
+            this.GetCancellationTokenOnDestroy(),
+            InterruptTokenSource.Token
+            );
+    }
+
+    #endregion
+
+    /// <summary>
+    /// Interrupts the current AI state and transitions to the specified state.
+    /// </summary>
+    /// <param name="nextState">The next state to transition to.</param>
+    protected void InterruptStateWith(FSMState nextState)
+    {
+        InterruptTokenSource.Cancel();
+        OnStateInterrupted();
+        CurrentState = nextState;
+        _ = StartFSMAsync();
+    }
+
+    // ...
+
 }
+
 ```
