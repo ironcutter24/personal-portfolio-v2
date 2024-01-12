@@ -41,31 +41,27 @@ while ensuring they play well with animations and interact correctly with other 
 ```csharp
 public class CustomEnemyAI : BaseEnemyAI
 {
-  protected override FSMState EnterState => IdleState;
+    protected override FSMState EnterState => IdleState;
 
-  void Start()
-  {
-    StartFSM();
-  }
+    async UniTask<FSMState> IdleState(CancellationToken token)
+    {
+        await HTask.WaitUntil(() => Actor.CanSeePlayer, token);
+        return ChaseState;
+    }
 
-  async UniTask<FSMState> IdleState(CancellationToken token)
-  {
-    await HTask.WaitUntil(() => Actor.CanSeePlayer, token);
-    return ChaseState;
-  }
+    async UniTask<FSMState> ChaseState(CancellationToken token)
+    {
+        await HTask.RepeatUntil(
+            () => Agent.SetDestination(PlayerInstance.Position),
+            () => Actor.CanAttackPlayer || !() => Actor.CanSeePlayer, 
+            .1f,  // Loop delta time
+            token
+            );
 
-  async UniTask<FSMState> ChaseState(CancellationToken token)
-  {
-    await HTask.RepeatUntil(
-      () => Agent.SetDestination(PlayerInstance.Position),
-      () => Actor.CanAttackPlayer, 
-      .1f, token
-      );
+        return Actor.CanAttackPlayer ? AttackState : ReturnToBoundsState;
+    }
 
-    return AttackState;
-  }
-
-  // ...
+    // ...
 }
 ```
 
