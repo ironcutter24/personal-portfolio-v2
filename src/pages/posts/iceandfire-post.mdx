@@ -38,7 +38,7 @@ while ensuring they play well with animations and interact correctly with other 
 ## Combat system
 **AI programming**
 
-```
+```csharp
 public class CustomEnemyAI : BaseEnemyAI
 {
   protected override FSMState EnterState => IdleState;
@@ -70,7 +70,7 @@ public class CustomEnemyAI : BaseEnemyAI
 ```
 
 **UniTask FSM**
-```
+```csharp
 [RequireComponent(typeof(AEnemy))]
 public abstract class BaseEnemyAI : MonoBehaviour
 {
