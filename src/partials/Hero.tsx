@@ -1,13 +1,13 @@
 import { HeroAvatar, HeroSocial, Section } from 'astro-boilerplate-components';
 
-import { GradientName } from '@/partials/GradientName';
+import { GradientText } from '@/partials/GradientText';
 
 const Hero = () => (
   <Section>
     <HeroAvatar
       title={
         <>
-          Hi there, I'm <GradientName>Damiano</GradientName> 👋
+          Hi there, I'm <GradientText>Damiano</GradientText> 👋
         </>
       }
       description={
