@@ -12,16 +12,10 @@ const Hero = () => (
       }
       description={
         <>
-          a{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            software engineer
-          </a>{' '}
-          and{' '}
-          <a className="text-cyan-400 hover:underline" href="/">
-            game dev generalist
-          </a>{' '}
-          who loves to design and develop interactive experiences. My main
-          skills are C# / C++ for Unity and Unreal.
+          a <span className="text-cyan-400">software engineer</span> and{' '}
+          <span className="text-cyan-400">game dev generalist</span> who loves
+          to design and develop interactive experiences. My main skills are C# /
+          C++ for Unity and Unreal.
         </>
       }
       avatar={
