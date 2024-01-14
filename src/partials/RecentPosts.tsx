@@ -1,9 +1,8 @@
 import type { MDXInstance } from 'astro';
 import type { IFrontmatter } from 'astro-boilerplate-components';
-import { Section } from 'astro-boilerplate-components';
+import { GradientText, Section } from 'astro-boilerplate-components';
 
 import { BlogGallery } from '@/partials/BlogGallery';
-import { GradientText } from '@/partials/GradientText';
 
 type IRecentPostsProps = {
   postList: MDXInstance<IFrontmatter>[];
@@ -14,11 +13,12 @@ const RecentPosts = (props: IRecentPostsProps) => (
     title={
       <div className="flex items-baseline justify-between">
         <div>
-          Recent <GradientText>Posts</GradientText>
+          Project <GradientText>Showcase</GradientText>
+          {/* Recent <GradientText>Posts</GradientText> */}
         </div>
 
         <div className="text-sm">
-          <a href="/posts/">View all Posts →</a>
+          <a href="/posts/">View all Projects →</a>
         </div>
       </div>
     }

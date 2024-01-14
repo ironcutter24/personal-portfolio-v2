@@ -11,7 +11,7 @@ const allPosts = await Astro.glob<IMarkdownMeta>('./posts/*.mdx');
 const visiblePosts = excludeDrafts(allPosts);
 const showcasePosts = getShowcase(visiblePosts);
 const sortedPosts = sortByDate(showcasePosts);
-const lastThreePosts = sortedPosts.slice(0, 3);
+const lastSixPosts = sortedPosts.slice(0, 6);
 
 const { title } = AppConfig;
 const { description } = AppConfig;
@@ -20,6 +20,6 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
   <Hero />
   <!--ProjectList /-->
-  <RecentPosts postList={lastThreePosts} />
+  <RecentPosts postList={lastSixPosts} />
   <CTA />
 </Base>
