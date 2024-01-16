@@ -1,6 +1,7 @@
-import { HeroAvatar, HeroSocial, Section } from 'astro-boilerplate-components';
+import { HeroAvatar, Section } from 'astro-boilerplate-components';
 
 import { GradientText } from '@/partials/GradientText';
+import SocialIcon from '@/partials/SocialIcon';
 
 const Hero = () => (
   <Section>
@@ -28,32 +29,26 @@ const Hero = () => (
       }
       socialButtons={
         <>
-          {/*
-          <a href="/" target="_blank">
-            <HeroSocial
-              src="/assets/images/icons/twitter-icon.png"
-              alt="Twitter icon"
-            />
-          </a>
-          <a href="/" target="_blank">
-            <HeroSocial
-              src="/assets/images/icons/facebook-icon.png"
-              alt="Facebook icon"
-            />
-          </a>
-          */}
-          <a href="https://www.linkedin.com/in/taglia24/" target="_blank">
-            <HeroSocial
-              src="/assets/images/icons/linkedin-icon.png"
-              alt="Linkedin icon"
-            />
-          </a>
-          <a href="https://www.youtube.com/@ironcutter-dev" target="_blank">
-            <HeroSocial
-              src="/assets/images/icons/youtube-icon.png"
-              alt="Youtube icon"
-            />
-          </a>
+          <SocialIcon
+            src="/assets/images/icons/fi-brands-linkedin.svg"
+            alt="LinkedIn icon"
+            href="https://www.linkedin.com/in/taglia24/"
+            color="#019CE8"
+          />
+
+          <SocialIcon
+            src="/assets/images/icons/fi-brands-github.svg"
+            alt="GitHub icon"
+            href="https://github.com/ironcutter24"
+            color="#9132AD"
+          />
+
+          <SocialIcon
+            src="/assets/images/icons/fi-brands-youtube.svg"
+            alt="YouTube icon"
+            href="https://www.youtube.com/@ironcutter-dev"
+            color="#FF0000"
+          />
         </>
       }
     />
