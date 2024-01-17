@@ -1,6 +1,5 @@
 ---
 import type { IMarkdownMeta } from '@/IMarkdownMeta';
-import { CTA } from '@/partials/CTA';
 import { Hero } from '@/partials/Hero';
 import { RecentPosts } from '@/partials/RecentPosts';
 import Base from '@/templates/Base.astro';
@@ -21,5 +20,5 @@ const { description } = AppConfig;
   <Hero />
   <RecentPosts postList={lastSixPosts} />
   <!--ProjectList /-->
-  <CTA />
+  <!--CTA /-->
 </Base>
