@@ -16,8 +16,8 @@ const Hero = () => (
           a passionate <b>software engineer</b> and <b>game dev generalist</b>{' '}
           dedicated to crafting immersive interactive experiences.
           <br />
-          Proficient in C# and C++, with expertise in <b>Unity</b> and{' '}
-          <b>UE5</b>.
+          Proficient in <b>C#</b> and <b>C++</b>, with expertise in <b>Unity</b>{' '}
+          and <b>Godot</b>.
         </>
       }
       avatar={

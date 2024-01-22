@@ -1,6 +1,6 @@
 import type { MDXInstance } from 'astro';
-import type { IFrontmatter } from 'astro-boilerplate-components';
 
+import type { IFrontmatter } from '@/IFrontmatter';
 import { BlogCard } from '@/partials/BlogCard';
 
 type IBlogGalleryProps = {

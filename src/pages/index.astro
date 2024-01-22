@@ -1,12 +1,12 @@
 ---
-import type { IMarkdownMeta } from '@/IMarkdownMeta';
+import type { IFrontmatter } from '@/IFrontmatter';
 import { Hero } from '@/partials/Hero';
 import { RecentPosts } from '@/partials/RecentPosts';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { excludeDrafts, getShowcase, sortByDate } from '@/utils/Posts';
 
-const allPosts = await Astro.glob<IMarkdownMeta>('./posts/*.mdx');
+const allPosts = await Astro.glob<IFrontmatter>('./posts/*.mdx');
 const visiblePosts = excludeDrafts(allPosts);
 const showcasePosts = getShowcase(visiblePosts);
 const sortedPosts = sortByDate(showcasePosts);
@@ -21,4 +21,4 @@ const { description } = AppConfig;
   <RecentPosts postList={lastSixPosts} />
   <!--ProjectList /-->
   <!--CTA /-->
-</Base>
+</Base>@/IFrontmatter

@@ -1,7 +1,7 @@
 import type { MDXInstance } from 'astro';
-import type { IFrontmatter } from 'astro-boilerplate-components';
 import { Section } from 'astro-boilerplate-components';
 
+import type { IFrontmatter } from '@/IFrontmatter';
 import { BlogGallery } from '@/partials/BlogGallery';
 import { GradientText } from '@/partials/GradientText';
 

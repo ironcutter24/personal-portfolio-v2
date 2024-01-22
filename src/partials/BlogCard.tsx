@@ -1,6 +1,10 @@
 import type { MDXInstance } from 'astro';
-import type { IFrontmatter } from 'astro-boilerplate-components';
 import { format } from 'date-fns';
+
+import type { IFrontmatter } from '@/IFrontmatter';
+import { isString } from '@/utils/Posts';
+
+import { Shield } from './Shield';
 
 type IBlogCardProps = {
   instance: MDXInstance<IFrontmatter>;
@@ -16,6 +20,13 @@ const BlogCard = (props: IBlogCardProps) => (
           alt={props.instance.frontmatter.imgAlt}
           loading="lazy"
         />
+        <div className="pl-2 pt-1">
+          {props.instance.frontmatter.shields.map((shieldUrl, _index) =>
+            isString(shieldUrl) ? (
+              <Shield url={shieldUrl.replace(/-(?![^?]*\?[^-]*-).*?-/, '-')} />
+            ) : null
+          )}
+        </div>
       </div>
       <div className="px-3 pb-6 pt-4 text-center">
         <h2 className="text-xl font-semibold">

@@ -1,8 +1,8 @@
 import type { MDXInstance } from 'astro';
 
-import type { IMarkdownMeta } from '@/IMarkdownMeta';
+import type { IFrontmatter } from '@/IFrontmatter';
 
-export const sortByDate = (posts: MDXInstance<IMarkdownMeta>[]) => {
+export const sortByDate = (posts: MDXInstance<IFrontmatter>[]) => {
   return posts.sort(
     (a, b) =>
       new Date(b.frontmatter.pubDate).valueOf() -
@@ -10,11 +10,11 @@ export const sortByDate = (posts: MDXInstance<IMarkdownMeta>[]) => {
   );
 };
 
-export const excludeDrafts = (posts: MDXInstance<IMarkdownMeta>[]) => {
+export const excludeDrafts = (posts: MDXInstance<IFrontmatter>[]) => {
   return posts.filter((item) => item.frontmatter.draft !== true);
 };
 
-export const getShowcase = (posts: MDXInstance<IMarkdownMeta>[]) => {
+export const getShowcase = (posts: MDXInstance<IFrontmatter>[]) => {
   return posts.filter((item) => item.frontmatter.showcase === true);
 };
 
