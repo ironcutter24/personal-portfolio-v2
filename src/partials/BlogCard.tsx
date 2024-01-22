@@ -31,12 +31,13 @@ const BlogCard = (props: IBlogCardProps) => (
           )}
         </div>
       </div>
-      <div className="px-3 pb-6 pt-4 text-center">
+      <div className="px-3 pb-6 pt-4 text-left">
         <h2 className="text-xl font-semibold">
           {props.instance.frontmatter.title}
         </h2>
         <div className="mt-1 text-xs text-gray-400">
-          {format(new Date(props.instance.frontmatter.pubDate), 'LLL yyyy')}
+          {format(new Date(props.instance.frontmatter.pubDate), 'LLL yyyy')} -{' '}
+          <u>Read more</u>
         </div>
         <div className="mt-2 text-sm">
           {props.instance.frontmatter.genre}
