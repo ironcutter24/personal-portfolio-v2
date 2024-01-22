@@ -1,7 +1,8 @@
 ---
 layout: '@/templates/BasePost.astro'
 title: Ice & Fire
-description: Top-down hack&slash vertical slice - Balance your temperature to stay alive.
+genre: Top-down hack&slash vertical slice.
+description: Balance your temperature to stay alive.
 pubDate: 2024-01-05T00:00:00Z
 imgSrc: '/assets/images/image-post2.jpeg'
 imgAlt: 'Cover art'
@@ -36,8 +37,13 @@ while ensuring they play well with animations and interact correctly with other 
 - Melee enemy lock  // TODO: import gif
 
 ## Combat system
+
+Developed an async state machine that greatly simplifies creation of AI behaviours.
+
+
 **AI programming**
 
+This is how Idle and Chase states for a simple enemy would look like:
 ```csharp
 public class CustomEnemyAI : BaseEnemyAI
 {
@@ -66,6 +72,7 @@ public class CustomEnemyAI : BaseEnemyAI
 ```
 
 **UniTask FSM**
+
 ```csharp
 /// <summary>
 /// Base class for enemy artificial intelligence.

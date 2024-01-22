@@ -13,17 +13,20 @@ type IBlogCardProps = {
 const BlogCard = (props: IBlogCardProps) => (
   <a className="hover:translate-y-1" href={props.instance.url}>
     <div className="overflow-hidden rounded-md bg-slate-800">
-      <div className="aspect-h-2 aspect-w-3">
+      <div className="aspect-h-2 aspect-w-3 relative">
         <img
           className="h-full w-full object-cover object-center"
           src={props.instance.frontmatter.imgSrc}
           alt={props.instance.frontmatter.imgAlt}
           loading="lazy"
         />
-        <div className="pl-2 pt-1">
+        <div className="absolute inset-x-0 bottom-0 flex items-end px-2">
           {props.instance.frontmatter.shields.map((shieldUrl, _index) =>
             isString(shieldUrl) ? (
-              <Shield url={shieldUrl.replace(/-(?![^?]*\?[^-]*-).*?-/, '-')} />
+              <Shield
+                key={_index}
+                url={shieldUrl.replace(/-(?![^?]*\?[^-]*-).*?-/, '-')}
+              />
             ) : null
           )}
         </div>
@@ -33,9 +36,11 @@ const BlogCard = (props: IBlogCardProps) => (
           {props.instance.frontmatter.title}
         </h2>
         <div className="mt-1 text-xs text-gray-400">
-          {format(new Date(props.instance.frontmatter.pubDate), 'LLL d, yyyy')}
+          {format(new Date(props.instance.frontmatter.pubDate), 'LLL yyyy')}
         </div>
         <div className="mt-2 text-sm">
+          {props.instance.frontmatter.genre}
+          <br />
           {props.instance.frontmatter.description}
         </div>
       </div>

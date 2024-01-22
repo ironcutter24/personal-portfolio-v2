@@ -2,7 +2,7 @@ type ISocialIconProps = {
   src: string;
   alt: string;
   href: string;
-  color?: string;
+  color: string;
 };
 
 const SocialIcon = (props: ISocialIconProps) => (
