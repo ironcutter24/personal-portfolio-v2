@@ -1,6 +1,7 @@
 ---
 import type { IFrontmatter } from '@/IFrontmatter';
 import { Hero } from '@/partials/Hero';
+import { ProjectList } from '@/partials/ProjectList';
 import { RecentPosts } from '@/partials/RecentPosts';
 import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
@@ -19,6 +20,6 @@ const { description } = AppConfig;
 <Base head={{ title, description }}>
   <Hero />
   <RecentPosts postList={lastSixPosts} />
-  <!--ProjectList /-->
+  <ProjectList />
   <!--CTA /-->
 </Base>

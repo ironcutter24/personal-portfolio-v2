@@ -1,7 +1,8 @@
 import type { MDXInstance } from 'astro';
 
 import type { IFrontmatter } from '@/IFrontmatter';
-import { BlogCard } from '@/partials/BlogCard';
+
+import { BlogCard } from './BlogCard';
 
 type IBlogGalleryProps = {
   postList: MDXInstance<IFrontmatter>[];

@@ -2,8 +2,9 @@ import type { MDXInstance } from 'astro';
 import { Section } from 'astro-boilerplate-components';
 
 import type { IFrontmatter } from '@/IFrontmatter';
-import { BlogGallery } from '@/partials/BlogGallery';
-import { GradientText } from '@/partials/GradientText';
+
+import { BlogGallery } from './BlogGallery';
+import { GradientText } from './GradientText';
 
 type IRecentPostsProps = {
   postList: MDXInstance<IFrontmatter>[];

@@ -1,7 +1,8 @@
 import { Section } from 'astro-boilerplate-components';
 
-import { FooterCopyright } from '@/partials/FooterCopyright';
 import { AppConfig } from '@/utils/AppConfig';
+
+import { FooterCopyright } from './FooterCopyright';
 
 const Footer = () => (
   <Section>

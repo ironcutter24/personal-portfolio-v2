@@ -5,7 +5,7 @@ import {
   Section,
 } from 'astro-boilerplate-components';
 
-import { GradientLogo } from '@/partials/GradientLogo';
+import { GradientLogo } from './GradientLogo';
 
 const Navbar = () => (
   <Section>

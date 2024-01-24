@@ -2,9 +2,10 @@
 import type { IFrontmatter } from '@/IFrontmatter';
 import { BlogPost } from '@/partials/BlogPost';
 import { Shield } from '@/partials/Shield';
-import Base from '@/templates/Base.astro';
 import { AppConfig } from '@/utils/AppConfig';
 import { isString } from '@/utils/Posts';
+
+import Base from './Base.astro';
 
 export interface Props {
   content: IFrontmatter;
