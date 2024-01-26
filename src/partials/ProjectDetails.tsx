@@ -1,7 +1,7 @@
 type IProjectDetailsProps = {
   role: string;
   company: string;
-  platforms: string;
+  platforms: string[];
   time: string;
 };
 
@@ -12,7 +12,8 @@ const ProjectDetails = (props: IProjectDetailsProps) => (
       <br />
       <b style={{ color: '#F37021' }}>Company:</b> <i>{props.company}</i>
       <br />
-      <b style={{ color: '#0089D0' }}>Platforms:</b> <i>{props.platforms}</i>
+      <b style={{ color: '#0089D0' }}>Platforms:</b>{' '}
+      <i>{props.platforms.join(' - ')}</i>
       <br />
       <b style={{ color: '#0DB14B' }}>Work time:</b> <i>{props.time}</i>
       <br />

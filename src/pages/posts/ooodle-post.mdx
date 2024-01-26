@@ -7,6 +7,19 @@ pubDate: 2023-10-18T00:00:00Z
 imgSrc: '/assets/images/covers/ooodle-cover.png'
 imgAlt: 'Cover art'
 showcase: true
+
+contributions:
+- Implemented multiplayer gameplay with remote game server.
+- Designed and implemented tile-based procedural level generation, spline-based navigation system and a scalable AI with pluggable behaviours.
+- Implemented the Unity side of the Flutter-Unity integration and produced documentation for Flutter frontend devs.
+- Created a realtime weather system using OpenWeatherMap API.
+- Collaborated with backend engineers to architect the backend infrastructure.
+studio: OOO Labs
+platforms:
+- Android
+- iOS
+duration: 4 months
+
 shields:
 - Unity-UGS_|_Matchmaker_|_Splines_|_DOTween-57b9d3.svg?style=flat&logo=unity
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
@@ -25,9 +38,9 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 <ProjectDetails
   role='Unity Developer'
-  company='OOO Labs'
-  platforms='Android - iOS'
-  time='4 Months'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
 />
 
 ## My contributions

@@ -5,8 +5,17 @@ export interface IFrontmatter {
   pubDate: string;
   imgSrc: string;
   imgAlt: string;
+
+  contributions: string[];
+  studio: string;
+  teamSize: string;
+  platforms: string[];
+  tools: string;
+  duration: string;
+
   showcase: boolean;
   draft: boolean;
+
   shields: string[];
 }
 // eslint-disable-next-line @typescript-eslint/consistent-type-imports

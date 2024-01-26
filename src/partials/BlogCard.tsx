@@ -4,6 +4,7 @@ import { format } from 'date-fns';
 import type { IFrontmatter } from '@/IFrontmatter';
 import { isString } from '@/utils/Posts';
 
+import { BlogCardField } from './BlogCardField';
 import { Shield } from './Shield';
 
 type IBlogCardProps = {
@@ -13,7 +14,7 @@ type IBlogCardProps = {
 const BlogCard = (props: IBlogCardProps) => (
   <a className="hover:translate-y-1" href={props.instance.url}>
     <div className="overflow-hidden rounded-md bg-slate-800">
-      <div className="aspect-h-2 aspect-w-3 relative">
+      <div className="aspect-h-9 aspect-w-16 relative">
         <img
           className="h-full w-full object-cover object-center"
           src={props.instance.frontmatter.imgSrc}
@@ -40,9 +41,37 @@ const BlogCard = (props: IBlogCardProps) => (
           <u>Read more</u>
         </div>
         <div className="mt-2 text-sm">
-          {props.instance.frontmatter.genre}
-          <br />
-          {props.instance.frontmatter.description}
+          <BlogCardField
+            title="What I did"
+            body={props.instance.frontmatter.contributions}
+            join=" "
+          />
+
+          <BlogCardField
+            title="Studio"
+            body={props.instance.frontmatter.studio}
+          />
+
+          <BlogCardField
+            title="Team size"
+            body={props.instance.frontmatter.teamSize}
+          />
+
+          <BlogCardField
+            title="Platforms"
+            body={props.instance.frontmatter.platforms}
+            join=" - "
+          />
+
+          <BlogCardField
+            title="Duration"
+            body={props.instance.frontmatter.duration}
+          />
+
+          <BlogCardField
+            title="Tools"
+            body={props.instance.frontmatter.tools}
+          />
         </div>
       </div>
     </div>

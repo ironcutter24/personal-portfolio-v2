@@ -7,6 +7,18 @@ pubDate: 2022-10-07T00:00:00Z
 imgSrc: '/assets/images/covers/arshooter-cover.png'
 imgAlt: 'Cover art'
 showcase: true
+
+contributions:
+- Developed an augmented reality mobile game as a solo developer.
+- Designed and developed gameplay mechanics and made them work with a resizable game world.
+- Implemented Play Games integration (Online saves, leaderboards).
+- Implemented text localization using Google Sheets API.
+- Composed and produced music, created sounds.
+studio: <Personal project>
+platforms:
+- Android
+duration: 4 months
+
 shields:
 - Unity-ARFoundation_|_ODIN_|_LeanTween-57b9d3.svg?style=flat&logo=unity
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
@@ -19,16 +31,14 @@ The main objective is to protect a floating AR island from **increasingly powerf
 The game world can be scaled and placed on the ground. Works great indoors, but can be played virtually everywhere.
 
 <StoreLinkBanner
-  gitHubUrl=''
   playStoreUrl='https://play.google.com/store/apps/details?id=com.ironcuttergames.arshooter'
-  itchUrl=''
 />
 
 <ProjectDetails
   role='Solo dev'
-  company='N/A'
-  platforms='Android'
-  time='3 Months'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
 />
 
 ## My contributions

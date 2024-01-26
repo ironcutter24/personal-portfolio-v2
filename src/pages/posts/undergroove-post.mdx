@@ -7,6 +7,15 @@ pubDate: 2023-02-05T00:00:00Z
 imgSrc: '/assets/images/covers/undergroove-cover.png'
 imgAlt: 'Cover art'
 showcase: true
+
+contributions:
+- Designed and implemented gameplay mechanics and level design tools over a 10 days game jam.
+- Implemented dynamic audio with FMOD integration.
+studio: <Game Jam>
+platforms:
+- PC
+duration: 10 days
+
 shields:
 - Unity-DOTween-57b9d3.svg?style=flat&logo=unity
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
@@ -23,15 +32,14 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 <StoreLinkBanner
   gitHubUrl='https://github.com/ironcutter24/GGJ-2023'
-  playStoreUrl=''
   itchUrl='https://ironcutter24.itch.io/undergroove'
 />
 
 <ProjectDetails
   role='Lead Developer - Gameplay Designer'
-  company='[Game Jam]'
-  platforms='PC'
-  time='10 Days'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
 />
 
 ## My contributions

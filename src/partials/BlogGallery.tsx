@@ -9,7 +9,7 @@ type IBlogGalleryProps = {
 };
 
 const BlogGallery = (props: IBlogGalleryProps) => (
-  <div className="grid grid-cols-1 gap-6 md:grid-cols-3">
+  <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
     {props.postList.map((elt) => (
       <BlogCard instance={elt} key={elt.url} />
     ))}

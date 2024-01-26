@@ -6,6 +6,17 @@ description: Metroidvania boss fight.
 pubDate: 2023-07-30T00:00:00Z
 imgSrc: '/assets/images/covers/reminderofsin-cover.png'
 imgAlt: 'Cover art'
+
+contributions:
+- Designed and developed gameplay mechanics.
+- Implemented complex boss AI.
+- Created custom camera transition system.
+studio: <Personal project>
+platforms:
+- WebGL
+- PC
+duration: 1 month
+
 shields:
 - Godot-%23FFFFFF.svg?style=flat&logo=godot-engine
 - GDScript-%2374267B.svg?style=flat
@@ -15,16 +26,14 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 {frontmatter.title} is a metroidvania boss fight developed as a personal project.
 
 <StoreLinkBanner
-  gitHubUrl=''
-  playStoreUrl=''
   itchUrl='https://ironcutter24.itch.io/victorian-metroidvania'
 />
 
 <ProjectDetails
   role='Solo dev'
-  company='N/A'
-  platforms='WebGL - PC'
-  time='1 Month'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
 />
 
 ## My contributions

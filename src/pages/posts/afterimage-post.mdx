@@ -7,6 +7,17 @@ pubDate: 2023-05-29T00:00:00Z
 imgSrc: '/assets/images/covers/afterimage-cover.png'
 imgAlt: 'Cover art'
 showcase: true
+
+contributions:
+- Directed a team of four over a 10 days game jam.
+- Designed gameplay mechanics, made half the levels and programmed all gameplay systems.
+- Animated astronaut character and ending cutscene.
+studio: <Game Jam>
+platforms:
+- WebGL
+- PC
+duration: 10 days
+
 shields:
 - Unity-DOTween-57b9d3.svg?style=flat&logo=unity
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
@@ -20,15 +31,14 @@ The game achieved the 52nd place for the best mechanics in GameDevTV Jam 2023.
 
 <StoreLinkBanner
   gitHubUrl='https://github.com/ironcutter24/GDtvJam2023'
-  playStoreUrl=''
   itchUrl='https://ironcutter24.itch.io/afterimage'
 />
 
 <ProjectDetails
   role='Director - Designer - Developer'
-  company='[Game Jam]'
-  platforms='WebGL - PC'
-  time='10 Days'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
 />
 
 ## My contributions
