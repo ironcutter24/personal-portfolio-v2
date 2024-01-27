@@ -47,14 +47,23 @@ damage taken to balancing your character's temperature and maintaining it at a s
 1. Audio implementation
 
 ## Gameplay
-- Turn management (FSM repo made during jam)
 - Unit movement
 - Unit abilities
 
-**FSM API example**
+The FSM library I developed to manage turns, player inputs and UI is available in its own [repo](https://github.com/ironcutter24/cs-state-machine) under MIT license.
+Here is a usage example:
 ```csharp
-FSM API example and link to repo
+private StateMachine<State> sm = new StateMachine<State>(State.FirstState);
+
+sm.Configure(State.FirstState)
+    .SubstateOf(State.BaseState)
+    .OnEntry(() => { /* Entered */ })
+    .OnProcess(() => { /* Processing... */ })
+    .OnExit(() => { /* Exited */ })
+    .AddTransition(State.OtherState, () => firstCondition())
+    .AddTransition(State.AnotherState, () => secondCondition());
 ```
 
 ## Utility based AI
-- Explain AI system
+- Modular score calculation methods, trying to achieve goals like: get close to attack targets, avoid attack trajectories, avoid getting surrounded.
+- It is possible to create multiple AIs composing score calculation methods.
