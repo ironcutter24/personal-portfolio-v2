@@ -8,7 +8,10 @@ type IProjectProps = {
 };
 
 const Project = (props: IProjectProps) => (
-  <div className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 md:flex-row">
+  <a
+    className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 hover:translate-y-1 md:flex-row"
+    href={props.link}
+  >
     {/*
     <div className="shrink-0">
       <a href={props.link}>
@@ -23,14 +26,12 @@ const Project = (props: IProjectProps) => (
     */}
     <div>
       <div className="flex flex-col items-center gap-y-2 md:flex-row">
-        <a className="hover:text-cyan-400" href={props.link}>
-          <div className="text-xl font-semibold">{props.name}</div>
-        </a>
+        <div className="text-xl font-semibold">{props.name}</div>
         <div className="ml-3 gap-2">{props.category}</div>
       </div>
       <p className="mt-3 text-gray-400">{props.description}</p>
     </div>
-  </div>
+  </a>
 );
 
 export { Project };
