@@ -1,0 +1,52 @@
+---
+layout: '@/templates/BasePost.astro'
+title: Dark Beat
+genre: Rhythm bullet-hell game.
+description: Traverse levels filled with rhythm based perils.
+pubDate: 2024-02-19T00:00:00Z
+imgSrc: '/assets/images/image-post2.jpeg'
+imgAlt: 'Cover art'
+showcase: false
+
+contributions:
+- Co-authored game idea and designed gameplay mechanics.
+- Developed system to sync game actions to sounds in music, developed wave tower and laser mechanics.
+- Contributed to team coordination.
+studio: <Game Jam>
+platforms:
+- PC
+duration: 10 days
+
+shields:
+- UE5-%23313131.svg?style=flat&logo=unrealengine&logoColor=white
+- Blueprints-%232774C0.svg?style=flat
+- FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
+---
+import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
+
+TODO: change description
+Vertical slice for a distinctive top-down hack & slash game, where the focus shifts from limiting
+damage taken to balancing your character's temperature and maintaining it at a stable level.
+
+<StoreLinkBanner
+  gitHubUrl='https://github.com/ironcutter24/boss-rush-jam-2024'
+  itchUrl='https://ironcutter24.itch.io/dark-beat'
+/>
+
+<ProjectDetails
+  role='Game Designer - Gameplay Programmer'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
+/>
+
+## My contributions
+
+1. [Gameplay programming](#gameplay)
+1. Game design
+1. Audio implementation
+
+## Gameplay
+- Audio sync system
+- Wave towers
+- Laser towers

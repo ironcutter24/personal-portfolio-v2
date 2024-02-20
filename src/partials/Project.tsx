@@ -11,6 +11,7 @@ const Project = (props: IProjectProps) => (
   <a
     className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 hover:translate-y-1 md:flex-row"
     href={props.link}
+    target="_Blank"
   >
     {/*
     <div className="shrink-0">
