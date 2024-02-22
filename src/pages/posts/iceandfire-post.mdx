@@ -36,23 +36,21 @@ damage taken to balancing your character's temperature and maintaining it at a s
 
 ## My contributions
 
-1. [Gameplay programming](#gameplay)
-1. [Custom combat system](#combat-system)
-1. Checkpoint system
+> 1. [Gameplay programming](#gameplay)
+> 1. [Custom combat system](#combat-system)
+> 1. Checkpoint system
 
 ## Gameplay
 I'm responsible for implementing main character locomotion and abilities,
 while ensuring they play well with animations and interact correctly with other systems.
-- Aim assist  // TODO: import images
-- Melee enemy lock  // TODO: import gif
+These include a controller stick aim assist system and enemy lock in melee combat.
 
 ## Combat system
 
 Developed an async state machine that greatly simplifies creation of AI behaviours.
 
 
-**AI programming**
-
+**AI programming**<br />
 This is how Idle and Chase states for a simple enemy would look like:
 ```csharp
 public class CustomEnemyAI : BaseEnemyAI
@@ -81,8 +79,9 @@ public class CustomEnemyAI : BaseEnemyAI
 }
 ```
 
-**UniTask FSM**
+<br />
 
+**UniTask FSM**<br />
 ```csharp
 /// <summary>
 /// Base class for enemy artificial intelligence.
