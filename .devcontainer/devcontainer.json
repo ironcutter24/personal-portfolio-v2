@@ -1,0 +1,26 @@
+{
+    "name": "Astro Web Dev",
+    "image": "mcr.microsoft.com/devcontainers/universal:2",
+    // Configure tool-specific properties.
+	"customizations": {
+		// Configure properties specific to VS Code.
+		"vscode": {
+			// Set *default* container specific settings.json values on container create.
+			"settings": {
+				"editor.formatOnSave": true,
+				"files.insertFinalNewline": true
+			},
+			// Add the IDs of extensions you want installed when the container is created.
+			"extensions": [
+        "astro-build.astro-vscode",
+        "bradlc.vscode-tailwindcss",
+        "unifiedjs.vscode-mdx",
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "mikestead.dotenv"
+			]
+		}
+	},
+    "features": {
+    }
+}
