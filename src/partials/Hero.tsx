@@ -13,11 +13,11 @@ const Hero = () => (
       }
       description={
         <>
-          a passionate <b>game dev generalist</b> and{' '}
+          a passionate <b>gameplay / AI programmer</b> and{' '}
           <b>technical game designer</b> dedicated to crafting immersive
           interactive experiences.
           <br />
-          Proficient in <b>C#</b> and <b>C++</b>, with expertise in <b>Unity</b>
+          Proficient in <b>C#</b>, with expertise in <b>Unity</b>
           , <b>UE5</b> and <b>Godot</b>.
         </>
       }
