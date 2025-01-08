@@ -12,7 +12,10 @@ type IBlogCardProps = {
 };
 
 const BlogCard = (props: IBlogCardProps) => (
-  <a className="hover:translate-y-1" href={props.instance.url}>
+  <a
+    className="transition delay-75 ease-in-out hover:translate-y-1"
+    href={props.instance.url}
+  >
     <div className="overflow-hidden rounded-md bg-slate-800">
       <div className="aspect-h-9 aspect-w-16 relative">
         <img

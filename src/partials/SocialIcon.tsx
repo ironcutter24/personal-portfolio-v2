@@ -7,7 +7,7 @@ type ISocialIconProps = {
 
 const SocialIcon = (props: ISocialIconProps) => (
   <a
-    className="relative ml-2 inline-flex items-center justify-center hover:translate-y-1"
+    className="relative ml-2 inline-flex items-center justify-center transition delay-75 ease-in-out hover:translate-y-1 hover:scale-105"
     href={props.href}
   >
     <svg className="h-9 w-9" viewBox="0 0 160 160" fill={props.color}>

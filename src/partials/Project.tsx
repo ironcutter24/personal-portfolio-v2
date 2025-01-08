@@ -9,7 +9,7 @@ type IProjectProps = {
 
 const Project = (props: IProjectProps) => (
   <a
-    className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 hover:translate-y-1 md:flex-row"
+    className="flex flex-col items-center gap-x-8 rounded-md bg-slate-800 p-3 transition delay-75 ease-in-out hover:translate-x-1 md:flex-row"
     href={props.link}
     target="_Blank"
   >
