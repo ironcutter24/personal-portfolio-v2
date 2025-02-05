@@ -27,17 +27,16 @@ interface Props {
 
 const { page } = Astro.props as Props;
 const titleSuffix = ` - ${AppConfig.site_name}`;
-const titleBase = `Blog page ${page.currentPage}`;
+const titleBase = `The Depths ${page.currentPage}`;
 const title = titleBase + titleSuffix;
-const description =
-  'Pagination example built with Astro styled with Tailwind CSS.';
+const description = 'Top projects showcase page.';
 ---
 
 <Base head={{ title, description }}>
   <Section>
     <PaginationHeader
-      title='Projects Blog'
-      description='Explore my best projects in full detail.'
+      title='Projects Depths 🪼'
+      description='Take a deep dive into my top projects.'
     />
   </Section>
 
