@@ -16,7 +16,7 @@ const ProjectList = () => (
     <div className="flex flex-col gap-6">
       <Project
         name="Curly Formatter"
-        description="VSCode extension that enforces Allman-style braces formatting across multiple languages, especially when the default formatter fails."
+        description="VSCode extension to enforce Allman-style braces formatting across multiple languages."
         link="https://marketplace.visualstudio.com/items?itemName=Ironcutter24.cscurlyformatter"
         category={
           <>
