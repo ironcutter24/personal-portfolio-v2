@@ -25,7 +25,7 @@ shields:
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 {frontmatter.title} is a **3D top-down action game** made for [Global Game Jam 2022](https://v3.globalgamejam.org/2022/games/neden-3).<br/>
 The gameplay focuses on the balance between offensive and defensive modes, leading to radical shifts in gameplay, camera perspective and AI behavior.
@@ -42,24 +42,25 @@ The gameplay focuses on the balance between offensive and defensive modes, leadi
   time={frontmatter.duration}
 />
 
-## My contributions
-
-> 1. [*Gameplay programming*](#gameplay-programming)
-> 1. *Object pooling system*
-> 1. *Enemy AI (FSM)*
-> 1. *Animated enemy character*
-> 1. [*Dynamic audio integration*](#dynamic-audio-integration)
-
-## Gameplay programming
-
 <EmbedVideo url="https://www.youtube.com/embed/iBQxlWeNaJQ?si=qicVa-AiJ0HMrQSi" />
 
+## My contributions
+
+<Collapsible title="Gameplay programming">
 Developed character controller with movement, dash, trap placement and knives throw.<br/>
 Created system that allows to switch between two game modes, adjusting player moveset, enemy AI, camera and post-processing accordingly.<br/>
 Implemented object pooling system for knives and traps. Probably a bit overkill in retrospect.
+</Collapsible>
 
-## Dynamic audio integration
+<Collapsible title="Object pooling system">
+Implemented object pooling system for projectiles, allowing for efficient reuse of game objects and reducing the overhead of instantiating and destroying objects.
+</Collapsible>
 
+<Collapsible title="Enemy AI (FSM)">
+Implemented finite state machine for enemy AI, managing their behavior and transitions between states.
+</Collapsible>
+
+<Collapsible title="Dynamic audio integration">
 <EmbedVideo url="https://www.youtube.com/embed/b6YrhRlrm2w?si=YSAT3UcV5MSHEs8F" />
-
 Implemented game-side of audio integration, managing audio cues for approaching enemies and music transitions for game modes and engaging in combat.
+</Collapsible>

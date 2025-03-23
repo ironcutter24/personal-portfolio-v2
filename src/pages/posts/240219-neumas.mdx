@@ -22,7 +22,7 @@ shields:
 - Blueprints-%232774C0.svg?style=flat
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 {frontmatter.title} is a **3D top-down action game** made for [Rhythm Jam 2024](https://itch.io/jam/rhythm-jam-2024), where every obstacle is synchronized with a sound in the game's original soundtrack.
 
@@ -40,17 +40,16 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 
 ## My contributions
 
-> 1. [Game design](#game-design)
-> 1. [Gameplay programming](#gameplay-programming)
-> 1. [Audio implementation](#audio-implementation)
-
-## Game Design
+<Collapsible title="Game Design">
 Designed mechanics for Wave towers, Laser towers and Piano Roll emitter.
 Gathered references and drew sketches to explain their looks and functionalities.
+</Collapsible>
 
-## Gameplay programming
+<Collapsible title="Gameplay programming">
 Implemented system to synchronize gameplay to audio events.
 Programmed Wave and Laser towers collision detection.
+</Collapsible>
 
-## Audio implementation
+<Collapsible title="Audio implementation">
 Implemented proximity audio level adjustment for objects reacting to audio events, and volumes to make music react to player progression.
+</Collapsible>

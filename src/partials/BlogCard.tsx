@@ -19,7 +19,7 @@ const BlogCard = (props: IBlogCardProps) => (
     <div className="overflow-hidden rounded-md bg-slate-800">
       <div className="aspect-h-9 aspect-w-16 relative">
         <img
-          className="h-full w-full object-cover object-center"
+          className="size-full object-cover object-center"
           src={props.instance.frontmatter.imgSrc}
           alt={props.instance.frontmatter.imgAlt}
           loading="lazy"

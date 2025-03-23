@@ -23,7 +23,7 @@ shields:
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 {frontmatter.title} is a **2D puzzle platformer** where the player controls two characters on distinct planes of existence.<br />
 They cannot interact with each other, and are blocked by walls made of their material (Solid and ghost).<br />
@@ -41,33 +41,29 @@ The game achieved the 52nd place for the best mechanics in [GameDevTV Jam 2023](
   time={frontmatter.duration}
 />
 
-## My contributions
-> 1. Coordinated a team of 4 people
-> 1. [Gameplay design/development](#gameplay)
-> 1. [Designed 4 levels and polished 2 others](#level-design)
-> 1. Animated the astronaut character
-> 1. Created intro and ending cutscenes
-
-## Gameplay
 <EmbedVideo url="https://www.youtube.com/embed/I0cuBfJZC24?si=9Dg-G2eXKbRtnKnJ" />
 
+## My contributions
+
+<Collapsible title="Gameplay design and development">
 Implemented character movement and grab ability, making sure that it is possible to carry each other on the cube.
 Programmed camera dynamic framing and all interactive objects.
+</Collapsible>
 
-## Level Design
+<Collapsible title="Level Design">
 I crafted four levels and conducted refinements on others,
 which involved the refactoring and simplification of the final level.
 
-**Polishing:** Added drop to teach the box-grabbing mechanic.
+**Polishing:** Added drop to teach box-grabbing mechanic.
 ![Box grab drop](../../images/post-afterimage/cube-grab-drop.png)
 
-**LV 2 design:** Teaches players they can launch the cube upwards.
+**LV 2 design:** Teaches players how to launch cubes upwards.
 ![Jump assist](../../images/post-afterimage/cube-launch.jpg)
 
-**LV 4 design:** Teaches players they can carry each other on the cube.
+**LV 4 design:** Teaches players how to carry each other on cubes.
 ![Jump assist](../../images/post-afterimage/jump-assist.png)
 
-**LV 6 design:** Guides towards an apparently simple solution,
+**LV 6 design:** Leads to an apparently simple solution,
 just to reveal that cubes can't pass through gates.
 This also builds on the upward cube launch mechanic introduced in LV 2.
 ![Fake door](../../images/post-afterimage/fake-door.png)
@@ -77,8 +73,9 @@ This also builds on the upward cube launch mechanic introduced in LV 2.
 ![Generic puzzle](../../images/post-afterimage/generic-puzzle.png)
 */}
 
-**LV 8 design:** "The Bridge" level. Uses the cube carry mechanic in a more complex way.
+**LV 8 design:** "The Bridge" level. Uses the cube carrying mechanic in a more complex way.
 ![The bridge](../../images/post-afterimage/the-bridge.png)
 
-**Design:** Designed the cube gate utilized in multiple levels.
+**Design:** Designed cube gates used in multiple levels.
 ![Cube gate](../../images/post-afterimage/cube-gates.png)
+</Collapsible>

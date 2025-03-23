@@ -25,7 +25,7 @@ shields:
 - GDScript-%2374267B.svg?style=flat
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 <div style="text-align: justify">
   {frontmatter.title} is a <b>turn-based tactics</b> game made for <a href="https://itch.io/jam/boss-rush-jam-2024">Boss Rush Jam 2024</a>.
@@ -45,17 +45,15 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-com
 />
 
 ## My contributions
-> 1. [Design and concepting](#design-and-concepting)
-> 1. [Gameplay programming](#gameplay)
-> 1. [Utility-based AI](#utility-based-ai)
 
-## Design and concepting
+<Collapsible title="Design and concepting">
 I co-designed the game mechanics, gathered references and drew concept art for all characters.
 The production for this project was managed in Miro,
 that contains all my sketches, as well as a general design document and project roadmap.
 ![Box grab drop](../../images/post-labescape/labescape-miro.png)
+</Collapsible>
 
-## Gameplay
+<Collapsible title="Gameplay programming">
 - A* navigation for unit movement validation
 - Set of different actions and reactions for the cast of characters
 - UI showing gameplay hints and characters stats
@@ -73,7 +71,9 @@ sm.Configure(State.FirstState)
     .AddTransition(State.OtherState, () => firstCondition())
     .AddTransition(State.AnotherState, () => secondCondition());
 ```
+</Collapsible>
 
-## Utility based AI
+<Collapsible title="Utility-based AI">
 - Modular score calculation methods, trying to achieve goals like: get close to attack targets, avoid attack trajectories, avoid getting surrounded.
 - It is possible to create multiple AIs composing score calculation methods.
+</Collapsible>
