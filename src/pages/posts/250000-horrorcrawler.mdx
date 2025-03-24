@@ -1,0 +1,46 @@
+---
+layout: '@/templates/BasePost.astro'
+title: Drauma
+genre: First person horror-thriller game.
+description: Lost in an abandoned natural reserve in the mountains, you discover a terrifying truth...
+pubDate: 2025-00-00T00:00:00Z
+imgSrc: '/assets/images/covers/drauma-cover.png'
+imgAlt: 'Cover art'
+showcase: false
+
+contributions:
+- Created initial demo as a solo dev for a game jam.
+- Drew concept art and created moodboard with art references.
+- Co-designed game narrative.
+- Implemented all gameplay and system mechanics.
+
+studio: <Personal project>
+platforms:
+- PC
+duration: 5 months
+
+shields:
+- Unity-DOTween-57b9d3.svg?style=flat&logo=unity
+- C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
+- FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
+---
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
+
+<div style="text-align: justify">
+  {frontmatter.title} is a...
+</div>
+
+<StoreLinkBanner
+  itchUrl='https://ironcutter24.itch.io/horror-crawler'
+/>
+
+<ProjectDetails
+  role='Game Designer - Lead Programmer'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
+/>
+
+## My contributions
+
+Work in progress...
