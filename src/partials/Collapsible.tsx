@@ -2,10 +2,11 @@ import React from 'react';
 
 interface CollapsibleProps {
   title: string;
+  important?: boolean;
   children: React.ReactNode;
 }
 
-const Collapsible = ({ title, children }: CollapsibleProps) => (
+const Collapsible = ({ title, important, children }: CollapsibleProps) => (
   <details
     style={{
       borderLeft: '4px solid #ccc',
@@ -14,7 +15,7 @@ const Collapsible = ({ title, children }: CollapsibleProps) => (
     }}
   >
     <summary
-      className="select-none rounded-md"
+      className="flex select-none items-center justify-between rounded-md"
       style={{
         cursor: 'pointer',
         backgroundColor: '#1E293B',
@@ -23,6 +24,7 @@ const Collapsible = ({ title, children }: CollapsibleProps) => (
       }}
     >
       {title}
+      {important && <span className="ml-2 text-orange-400">Hot topic 🔥</span>}
     </summary>
     {children}
   </details>
