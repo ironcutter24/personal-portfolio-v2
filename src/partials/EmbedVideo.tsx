@@ -6,6 +6,7 @@ type IEmbedVideoProps = {
 
 const EmbedVideo: React.FC<IEmbedVideoProps> = (props: IEmbedVideoProps) => (
   <div
+    className="overflow-hidden rounded-lg"
     style={{
       maxWidth: '560px',
       margin: '0px auto',
@@ -26,7 +27,8 @@ const EmbedVideo: React.FC<IEmbedVideoProps> = (props: IEmbedVideoProps) => (
           width: '100%',
           height: '100%',
         }}
-        frameBorder="0"
+        allow="autoplay; encrypted-media; picture-in-picture; web-share"
+        referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
         src={props.url}
       ></iframe>
