@@ -4,7 +4,7 @@ type IEmbedVideoProps = {
   url: string;
 };
 
-const EmbedVideo: React.FC<IEmbedVideoProps> = ({ url }) => (
+const EmbedVideo: React.FC<IEmbedVideoProps> = (props: IEmbedVideoProps) => (
   <div
     style={{
       maxWidth: '560px',
@@ -28,7 +28,7 @@ const EmbedVideo: React.FC<IEmbedVideoProps> = ({ url }) => (
         }}
         frameBorder="0"
         allowFullScreen
-        src={url}
+        src={props.url}
       ></iframe>
     </div>
   </div>

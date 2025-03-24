@@ -6,7 +6,7 @@ interface CollapsibleProps {
   children: React.ReactNode;
 }
 
-const Collapsible = ({ title, important, children }: CollapsibleProps) => (
+const Collapsible = (props: CollapsibleProps) => (
   <details
     style={{
       borderLeft: '4px solid #ccc',
@@ -23,10 +23,12 @@ const Collapsible = ({ title, important, children }: CollapsibleProps) => (
         padding: '0.5rem',
       }}
     >
-      {title}
-      {important && <span className="ml-2 text-orange-400">Hot topic 🔥</span>}
+      {props.title}
+      {props.important && (
+        <span className="ml-2 text-orange-400">Hot topic 🔥</span>
+      )}
     </summary>
-    {children}
+    {props.children}
   </details>
 );
 
