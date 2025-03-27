@@ -1,3 +1,5 @@
+import { GradientText } from './GradientText';
+
 type IProjectDetailsProps = {
   role: string;
   company: string;
@@ -7,17 +9,21 @@ type IProjectDetailsProps = {
 
 const ProjectDetails = (props: IProjectDetailsProps) => (
   <>
-    <p>
-      <b style={{ color: '#FCB711' }}>Role:</b> <i>{props.role}</i>
-      <br />
-      <b style={{ color: '#F37021' }}>Company:</b> <i>{props.company}</i>
-      <br />
-      <b style={{ color: '#0089D0' }}>Platforms:</b>{' '}
+    <hr className="mb-4 mt-8"></hr>
+    <div className="grid w-60 grid-cols-2 gap-0 overflow-visible whitespace-nowrap font-bold">
+      <GradientText>Role</GradientText>
+      <i>{props.role}</i>
+
+      <GradientText>Company</GradientText>
+      <i>{props.company}</i>
+
+      <GradientText>Platforms</GradientText>
       <i>{props.platforms.join(' - ')}</i>
-      <br />
-      <b style={{ color: '#0DB14B' }}>Work time:</b> <i>{props.time}</i>
-      <br />
-    </p>
+
+      <GradientText>Work time</GradientText>
+      <i>{props.time}</i>
+    </div>
+    <hr className="mb-8 mt-4"></hr>
   </>
 );
 
