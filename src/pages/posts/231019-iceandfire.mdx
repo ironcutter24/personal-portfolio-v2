@@ -1,0 +1,75 @@
+---
+layout: '@/templates/BasePost.astro'
+title: Ice and Fire [Demo]
+genre: Top-down hack-n-slash
+description: Fight northern gods and monsters in a world split into two factions.
+pubDate: 2023-10-19T00:00:00Z
+imgSrc: '/assets/images/image-post.jpeg'
+imgAlt: 'Cover art'
+showcase: true
+
+contributions:
+- Gameplay, system and AI programming.
+
+studio: <Personal project>
+platforms:
+- PC
+duration: 2 years
+
+shields:
+- Unity-DOTween-57b9d3.svg?style=flat&logo=unity
+- C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
+---
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
+
+<div style="text-align: justify">
+  {frontmatter.title} is a top-down hack-n-slash game with health replaced by a heat system,
+  where you have to keep your temperature balanced.
+</div>
+
+<StoreLinkBanner
+  girlUrl='https://github.com/FrozenFireGames/Heat-Change-Game'
+/>
+
+<ProjectDetails
+  role='Lead Programmer'
+  company={frontmatter.studio}
+  platforms={frontmatter.platforms}
+  time={frontmatter.duration}
+/>
+
+## My contributions
+
+<Collapsible title="Player controller" important>
+  Developed player controller that allows to move, dash, perform a variety of attacks and combos.
+
+  ### Traversal abilities
+  1. **Move**: move in the facing direction
+  1. **Dash**: A quick movement in the facing direction, with a cooldown
+  1. **Ride gayser**: Ride a gayser following a fixed trajectory to reach higher places
+
+  ### Combat abilities
+  _Each is either hot or cold, and can affect player temperature_
+  1. **Base attack**: Pretty quick melee attack, main source of output damage
+  1. **Heavy attack**: Heavier and slightly slower melee attack
+  1. **Charged attack**: Powerful melee attack that takes some time to charge
+  1. **Dash attack**: Chain melee attack to a dash
+  1. **Projectile Launch**: launches a projectile in the facing direction
+      - Aim aid system silently adjusts controller input to gracefully snap to enemies
+  1. **AOE attack**: Area of effect attack that deals damage to all enemies in a radius around the player
+</Collapsible>
+
+<Collapsible title="Combat system">
+  Built framework on top of Unity to handle hitboxes for applying and receiving damage, as well as parrying attacks.
+</Collapsible>
+
+<Collapsible title="Enemy AI">
+  ```csharp
+  Code samples...
+  ```
+</Collapsible>
+
+<Collapsible title="Scrum managed team">
+  The work was done in a scrum managed team,
+  using tools like Trello and Discord to keep track of tasks and communicate with the team.
+</Collapsible>
