@@ -1,7 +1,7 @@
 ---
 layout: '@/templates/BasePost.astro'
 title: SkyGuard AR
-genre: Arcade AR shooter.
+genre: Arcade AR shooter
 description: Defend your floating island from incoming enemies.
 pubDate: 2022-10-07T00:00:00Z
 imgSrc: '/assets/images/covers/arshooter-cover.png'
@@ -24,7 +24,7 @@ shields:
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
 - Google%20Cloud-%234285F4.svg?logo=google-cloud&logoColor=white
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 {frontmatter.title} is an **augmented reality** arcade shooter for Android, developed as a personal **learning project**.
 The main objective is to protect a floating AR island from **increasingly powerful waves** of enemy planes and aircrafts by **shooting at them from your phone**.<br />
@@ -45,7 +45,30 @@ The game world can be scaled and placed on the ground. Works great indoors, but 
 
 ## My contributions
 
-> 1. Gameplay programming
-> 1. Resizable game world
-> 1. Play Games integration (Online saves, leaderboards)
-> 1. Text localization (Google Sheets API)
+<Collapsible title="Gameplay programming">
+Shooting mechanics, enemy AI, game world scaling and placement.
+</Collapsible>
+
+<Collapsible title="Resizable game world">
+The game world can be scaled and placed on the ground.
+Works great indoors, but can be played virtually everywhere.
+Cannon meshes are scaled accordingly, to keep the distance between projectiles proportional to the size of the world.
+They are also moved closer to the camera, so that they occupy the same screen space at any size.
+</Collapsible>
+
+<Collapsible title="Object pooling system" important>
+Implemented object pooling system for projectiles,
+allowing for efficient reuse of game objects and reducing the overhead of instantiating and destroying objects.
+</Collapsible>
+
+<Collapsible title="Play Games integration" important>
+### Online saves
+Progress in the game is automatically synced with the Google Play Games account,
+allowing to restore it even on different devices.
+### Leaderboards
+Player scores are automatically uploaded to the global leaderboard, which is updated in real time.
+</Collapsible>
+
+<Collapsible title="Text localization">
+Localization data is retrieved from the cloud during the build process (using Google Sheets API).
+</Collapsible>
