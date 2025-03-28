@@ -47,33 +47,33 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
 ## My contributions
 
 <Collapsible title="Design and concepting">
-I co-designed the game mechanics, gathered references and drew concept art for all characters.
-The production for this project was managed in Miro,
-that contains all my sketches, as well as a general design document and project roadmap.
-![Box grab drop](../../images/post-labescape/labescape-miro.png)
+  I co-designed the game mechanics, gathered references and drew concept art for all characters.
+  The production for this project was managed in Miro,
+  that contains all my sketches, as well as a general design document and project roadmap.
+  ![Box grab drop](../../images/post-labescape/labescape-miro.png)
 </Collapsible>
 
 <Collapsible title="System programming">
-- A* navigation for unit movement validation
-- Set of different actions and reactions for the cast of characters
-- UI showing gameplay hints and characters stats
+  - A* navigation for unit movement validation
+  - Set of different actions and reactions for the cast of characters
+  - UI showing gameplay hints and characters stats
 
-The FSM library I developed to manage turns, player inputs and UI is available in its own [repo](https://github.com/ironcutter24/cs-state-machine) under MIT license.
-Here is a usage example:
-```csharp
-private StateMachine<State> sm = new StateMachine<State>(State.FirstState);
+  The FSM library I developed to manage turns, player inputs and UI is available in its own [repo](https://github.com/ironcutter24/cs-state-machine) under MIT license.
+  Here is a usage example:
+  ```csharp
+  private StateMachine<State> sm = new StateMachine<State>(State.FirstState);
 
-sm.Configure(State.FirstState)
-    .SubstateOf(State.BaseState)
-    .OnEntry(() => { /* Entered */ })
-    .OnProcess(() => { /* Processing... */ })
-    .OnExit(() => { /* Exited */ })
-    .AddTransition(State.OtherState, () => firstCondition())
-    .AddTransition(State.AnotherState, () => secondCondition());
-```
+  sm.Configure(State.FirstState)
+      .SubstateOf(State.BaseState)
+      .OnEntry(() => { /* Entered */ })
+      .OnProcess(() => { /* Processing... */ })
+      .OnExit(() => { /* Exited */ })
+      .AddTransition(State.OtherState, () => firstCondition())
+      .AddTransition(State.AnotherState, () => secondCondition());
+  ```
 </Collapsible>
 
 <Collapsible title="Utility-based AI" important>
-- Modular score calculation methods, trying to achieve goals like: get close to attack targets, avoid attack trajectories, avoid getting surrounded.
-- It is possible to create multiple AIs composing score calculation methods.
+  - Modular score calculation methods, trying to achieve goals like: get close to attack targets, avoid attack trajectories, avoid getting surrounded.
+  - It is possible to create multiple AIs composing score calculation methods.
 </Collapsible>
