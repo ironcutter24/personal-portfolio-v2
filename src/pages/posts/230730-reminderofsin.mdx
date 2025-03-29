@@ -39,12 +39,22 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
 
 ## My contributions
 
-<Collapsible title="Metroidvania traversal mechanics">
-  Precise jumping mechanic, with a focus on player control and responsiveness.
+<Collapsible title="Player controller">
+  Very responsive movement, with precise jumping and air control,
+  with a focus on future platforming and traversal mechanics.
 </Collapsible>
 
-<Collapsible title="Boss AI">
-  Developed a AI system using a hierarchical finite state machine (HFSM) to manage the boss's behavior and transitions between different states.
+<Collapsible title="Combat system">
+  Developed a set of custom components to use as hitboxes, hurtboxes and other collision shapes,
+  integrated with a base character class to allow for easy customization and reuse.
+</Collapsible>
+
+<Collapsible title="Bossfight" important>
+  Developed a generic AI system using a hierarchical finite state machine (HFSM),
+  that can be plugge into any character and powers the boss behavior.
+
+  The bossfight start trigger is integrated with the camera system,
+  allowing for scripted camera movements and to swap camera behavior and bounds when entering/exiting the fight.
 </Collapsible>
 
 <Collapsible title="Camera transitions system">

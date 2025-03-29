@@ -24,8 +24,8 @@ shields:
 import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 <div style="text-align: justify">
-  {frontmatter.title} is a top-down hack-n-slash game with health replaced by a heat system,
-  where you have to keep your temperature balanced.
+  {frontmatter.title} is a **top-down hack-n-slash** game with health replaced by a heat system,
+  where you have to **keep your temperature balanced**.
 </div>
 
 <StoreLinkBanner
@@ -60,8 +60,12 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
   1. **AOE attack**: Area of effect attack that deals damage to all enemies in a radius around the player
 </Collapsible>
 
-<Collapsible title="Combat system">
+<Collapsible title="Combat system" important>
   Built framework on top of Unity to handle hitboxes for applying and receiving damage, as well as parrying attacks.
+
+  Each character has a single "CollisionRoot" component that manages all the children hitboxes and hurtboxes,
+  allowing for complex interactions where multiple collision events are taken into account at the same time
+  (e.g. ignoring hitbox damage if it has been parried in the same frame).
 </Collapsible>
 
 <Collapsible title="Enemy AI">
@@ -70,7 +74,20 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
   ```
 </Collapsible>
 
-<Collapsible title="Scrum managed team">
-  The work was done in a scrum managed team,
-  using tools like Trello and Discord to keep track of tasks and communicate with the team.
+### Other notable features
+
+<Collapsible title="Team management">
+  The project was managed using the Scrum methodology, with one-week sprints.
+  A Kanban board (HackNPlan) was utilized to track tasks and monitor progress throughout the development cycle.
+  Sprint reviews were held at the end of each week on Discord to assess completed tasks and plan for the next sprint.
+  
+  Most of the design and planning was done in Google Documents, where we created:
+  1. Design documents
+  1. Technical documents
+  1. Art bible
+
+  <span style={{ display: 'inline-flex', alignItems: 'center' }}>
+    <img src="https://img.shields.io/badge/Miro-050038?logo=miro&logoColor=fff" alt="Miro" style={{ marginRight: '0.5rem' }} />
+    was used for brainstorming and sketching ideas.
+  </span>
 </Collapsible>

@@ -28,7 +28,7 @@ shields:
 import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
 
 <div style="text-align: justify">
-  {frontmatter.title} is a first person horror-thriller game with retro aesthetics and fixed 4:3 screen ratio.
+  {frontmatter.title} is a **first person horror-thriller** game with **retro aesthetics** and fixed 4:3 screen ratio.
 </div>
 
 <StoreLinkBanner
@@ -44,7 +44,7 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
 
 ## My contributions
 
-<Collapsible title="Open world dynamic loading system">
+<Collapsible title="Open world dynamic loading system" important>
   The loading system was inspired by a GDC talk from the developers of Firewatch.
   Unfortunately the video is no longer available,
   but the gist of it is that the game world is divided into chunks,
@@ -63,12 +63,14 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
   1. Actions or animations triggered by dialogue choices or progression
 </Collapsible>
 
-<Collapsible title="Save system">
+<Collapsible title="Save system" important>
   Designed a save system with manual and auto save functionality,
   using [Json.NET](https://www.newtonsoft.com/json) for its powerful serialization features.
 
   Manual saves are managed by the player, while auto saves are triggered by specific events in the game world.
   In case of game over the latest save is loaded, but the manual save is the only one kept between game sessions.
+
+  Savable objects are easily editable by adding a "UniqueId" component to them, and assigning methods to Unity events.
 </Collapsible>
 
 <Collapsible title="UI system">
