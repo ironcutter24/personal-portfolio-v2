@@ -25,7 +25,10 @@ const Collapsible = (props: CollapsibleProps) => (
     >
       {props.title}
       {props.important && (
-        <span className="ml-2 text-orange-400">Hot topic 🔥</span>
+        <span className="ml-2 text-orange-400">
+          <span className="hidden sm:inline">Hot topic 🔥</span>
+          <span className="sm:hidden">🔥</span>
+        </span>
       )}
     </summary>
     {props.children}
