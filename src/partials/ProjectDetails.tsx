@@ -10,7 +10,10 @@ type IProjectDetailsProps = {
 const ProjectDetails = (props: IProjectDetailsProps) => (
   <>
     <hr className="mb-4 mt-8"></hr>
-    <div className="grid w-60 grid-cols-2 gap-0 overflow-visible whitespace-nowrap font-bold">
+    <div
+      className="grid grid-cols-2 gap-0 overflow-visible font-bold"
+      style={{ gridTemplateColumns: '7em 1fr' }}
+    >
       <GradientText>Role</GradientText>
       <i>{props.role}</i>
 
