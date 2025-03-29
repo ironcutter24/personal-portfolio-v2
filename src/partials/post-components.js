@@ -1,5 +1,6 @@
 // Components used in .mdx pages
-export { StoreLinkBanner } from './StoreLinkBanner.tsx';
-export { ProjectDetails } from './ProjectDetails.tsx';
-export { EmbedVideo } from './EmbedVideo.tsx';
 export { Collapsible } from './Collapsible.tsx';
+export { EmbedVideo } from './EmbedVideo.tsx';
+export { InlineBadge } from './InlineBadge.tsx';
+export { ProjectDetails } from './ProjectDetails.tsx';
+export { StoreLinkBanner } from './StoreLinkBanner.tsx';

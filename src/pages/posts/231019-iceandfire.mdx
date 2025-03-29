@@ -21,7 +21,7 @@ shields:
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible, InlineBadge } from '@/partials/post-components';
 
 <div style="text-align: justify">
   {frontmatter.title} is a **top-down hack-n-slash** game with health replaced by a heat system,
@@ -86,8 +86,9 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
   1. Technical documents
   1. Art bible
 
-  <span style={{ display: 'inline-flex', alignItems: 'center' }}>
-    <img src="https://img.shields.io/badge/Miro-050038?logo=miro&logoColor=fff" alt="Miro" style={{ marginRight: '0.5rem' }} />
-    was used for brainstorming and sketching ideas.
-  </span>
+  <InlineBadge
+    src="https://img.shields.io/badge/Miro-FFDD33?style=flat&logo=miro&logoColor=1C1C1E"
+      alt="Miro">
+    Brainstorming and sketching of new ideas was done in [[badge]].
+  </InlineBadge>
 </Collapsible>

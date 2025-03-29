@@ -24,7 +24,7 @@ shields:
 - C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
 - Google%20Cloud-%234285F4.svg?logo=google-cloud&logoColor=white
 ---
-import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
+import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible, InlineBadge } from '@/partials/post-components';
 
 {frontmatter.title} is an **augmented reality** arcade shooter for Android, developed as a personal **learning project**.
 The main objective is to protect a floating AR island from **increasingly powerful waves** of enemy planes and aircrafts by **shooting at them from your phone**.<br />
@@ -63,8 +63,10 @@ The game world can be scaled and placed on the ground. Works great indoors, but 
 
 <Collapsible title="Play Games integration" important>
   ### Online saves
-  Progress in the game is automatically synced with the Google Play Games account,
-  allowing to restore it even on different devices.
+  <InlineBadge src="https://img.shields.io/badge/Google_Play-21843F?logo=google-play&logoColor=white" alt="Google Play">
+    Progress in the game is automatically synced with the [[badge]] account, allowing to restore it even on different devices.
+  </InlineBadge>
+
   ### Leaderboards
   Player scores are automatically uploaded to the global leaderboard, which is updated in real time.
 </Collapsible>
