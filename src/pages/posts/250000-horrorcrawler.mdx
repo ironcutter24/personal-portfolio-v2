@@ -21,7 +21,8 @@ duration: 5 months
 
 shields:
 - Unity-DOTween-57b9d3.svg?style=flat&logo=unity
-- C%23-%23239120.svg?style=flat&logo=csharp&logoColor=white
+- C%23-Stateless_|_Json.NET-%23239120.svg?style=flat
+- Ink-ECECEC.svg?style=flat
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
 ---
 import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/partials/post-components';
@@ -43,4 +44,36 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
 
 ## My contributions
 
-Work in progress...
+<Collapsible title="Open world dynamic loading system">
+  The loading system was inspired by a GDC talk from the developers of Firewatch.
+  Unfortunately the video is no longer available,
+  but the gist of it is that the game world is divided into chunks,
+  and only the chunks that are close to the player or visible from a distance (with LODs) are loaded into memory.
+  This allows for a large game world to be loaded seamlessly and with no performance issues.
+</Collapsible>
+
+<Collapsible title="Grid-based movement and world">
+  Implemented grid based movement, and extended Unity tilemap system to create and edit world chunks in a 3D grid.
+</Collapsible>
+
+<Collapsible title="Dialogue system">
+  Implemented dialoue system on top of [Ink](https://www.inklestudios.com/ink/) that allows for:
+  1. Branching dialogues
+  1. Contextual item inspection text (affected by world state)
+  1. Actions or animations triggered by dialogue choices or progression
+</Collapsible>
+
+<Collapsible title="Save system">
+  Designed a save system with manual and auto save functionality,
+  using [Json.NET](https://www.newtonsoft.com/json) for its powerful serialization features.
+
+  Manual saves are managed by the player, while auto saves are triggered by specific events in the game world.
+  In case of game over the latest save is loaded, but the manual save is the only one kept between game sessions.
+</Collapsible>
+
+<Collapsible title="UI system">
+  Management of UI panels with a custom pushdown automata system.
+  This includes prompts in the game world,
+  item descriptions, dialogue interface,
+  puzzle views and contextual prompts for player inputs.
+</Collapsible>
