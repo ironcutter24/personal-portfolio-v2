@@ -5,7 +5,7 @@ export interface IFrontmatter {
   pubDate: string;
   imgSrc: string;
   imgAlt: string;
-  youtubeUrl?: string;
+  videoUrl?: string;
 
   contributions: string[];
   studio: string;

@@ -22,6 +22,8 @@ const EmbedVideo: React.FC<IEmbedVideoProps> = (props: IEmbedVideoProps) => (
       <iframe
         style={{
           position: 'absolute',
+          transform: 'scale(1.01)',
+          transformOrigin: 'center center',
           top: '0px',
           left: '0px',
           width: '100%',
@@ -30,7 +32,11 @@ const EmbedVideo: React.FC<IEmbedVideoProps> = (props: IEmbedVideoProps) => (
         allow="autoplay; encrypted-media; picture-in-picture; web-share"
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
-        src={props.url}
+        src={`${props.url}${
+          props.url.includes('player.vimeo.com')
+            ? '?autoplay=1&background=1&transparent=0&title=0&byline=0&portrait=0&muted=1'
+            : ''
+        }`}
       ></iframe>
     </div>
   </div>

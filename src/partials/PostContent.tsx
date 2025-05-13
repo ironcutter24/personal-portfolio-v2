@@ -13,8 +13,8 @@ const PostContent = (props: IPostContentProps) => (
   <>
     <div className="mx-auto mt-5 max-w-prose">
       <div className="aspect-h-9 aspect-w-16">
-        {props.content.youtubeUrl ? (
-          <EmbedVideo url={props.content.youtubeUrl} />
+        {props.content.videoUrl ? (
+          <EmbedVideo url={props.content.videoUrl} />
         ) : (
           <img
             className="size-full rounded-lg object-cover object-center"
