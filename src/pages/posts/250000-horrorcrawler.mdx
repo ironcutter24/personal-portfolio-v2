@@ -21,7 +21,7 @@ platforms:
 duration: 5 months
 
 shields:
-- Unity-DOTween-57b9d3.svg?style=flat&logo=unity
+- Unity-UniTask_|_DOTween-57b9d3.svg?style=flat&logo=unity
 - C%23-Stateless_|_Json.NET-%23239120.svg?style=flat
 - Ink-ECECEC.svg?style=flat
 - FMOD-0058D9?style=flat&logo=fmod&logoColor=#7D929E
@@ -74,9 +74,22 @@ import { StoreLinkBanner, ProjectDetails, EmbedVideo, Collapsible } from '@/part
   Savable objects are easily editable by adding a "UniqueId" component to them, and assigning methods to Unity events.
 </Collapsible>
 
+<Collapsible title="In-game debug/cheats console" important>
+  Developed a custom debug console that allows to control most game systems at runtime, including:
+  - Teleporting to any location in the world
+  - Add/remove items to/from inventory
+  - Load/Unload world chunks
+  - Save/Load game state
+</Collapsible>
+
 <Collapsible title="UI system">
   Management of UI panels with a custom pushdown automata system.
   This includes prompts in the game world,
   item descriptions, dialogue interface,
   puzzle views and contextual prompts for player inputs.
+</Collapsible>
+
+<Collapsible title="Spatialized audio integration">
+  Integrated [FMOD](https://www.fmod.com/) for audio management, with custom 3D volumes to manage audio sources and transitions.
+  It also includes a custom attenuation system for interior spaces.
 </Collapsible>
