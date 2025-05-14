@@ -34,7 +34,7 @@ const EmbedVideo: React.FC<IEmbedVideoProps> = (props: IEmbedVideoProps) => (
         allowFullScreen
         src={`${props.url}${
           props.url.includes('player.vimeo.com')
-            ? '?autoplay=1&background=1&transparent=0&title=0&byline=0&portrait=0&muted=1'
+            ? '?autoplay=1&background=0&transparent=0&title=0&byline=0&portrait=0&muted=1'
             : ''
         }`}
       ></iframe>
