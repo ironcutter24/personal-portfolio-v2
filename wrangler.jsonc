@@ -1,6 +1,6 @@
 {
   "$schema": "node_modules/wrangler/config-schema.json",
-  "name": "gamedev-portfolio",
+  "name": "gamedev-portfolio-v2",
   // Update to today's date
   "compatibility_date": "2025-06-19",
   "assets": {
